@@ -1,0 +1,4306 @@
+{
+  "metadata": {
+    "title": "Geometric Sacred Skill Tree - No Overlap",
+    "totalNodes": 318,
+    "generatedAt": "2025-11-28T08:58:38.102Z",
+    "note": "Nodes have unique shapes and positions with no overlap"
+  },
+  "nodes": [
+    {
+      "id": "hub_0",
+      "label": "★ Core",
+      "x": 230,
+      "y": 0,
+      "kind": "start",
+      "extras": {
+        "description": "Central origin point",
+        "cost": 0,
+        "damage": 0,
+        "shape": "star",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "hub_1",
+      "label": "★ Core",
+      "x": 130,
+      "y": 173,
+      "kind": "start",
+      "extras": {
+        "description": "Central origin point",
+        "cost": 0,
+        "damage": 0,
+        "shape": "star",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "hub_2",
+      "label": "★ Core",
+      "x": -70,
+      "y": 173,
+      "kind": "start",
+      "extras": {
+        "description": "Central origin point",
+        "cost": 0,
+        "damage": 0,
+        "shape": "star",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "hub_3",
+      "label": "★ Core",
+      "x": -170,
+      "y": 0,
+      "kind": "start",
+      "extras": {
+        "description": "Central origin point",
+        "cost": 0,
+        "damage": 0,
+        "shape": "star",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "hub_4",
+      "label": "★ Core",
+      "x": -70,
+      "y": -173,
+      "kind": "start",
+      "extras": {
+        "description": "Central origin point",
+        "cost": 0,
+        "damage": 0,
+        "shape": "star",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "hub_5",
+      "label": "★ Core",
+      "x": 130,
+      "y": -173,
+      "kind": "start",
+      "extras": {
+        "description": "Central origin point",
+        "cost": 0,
+        "damage": 0,
+        "shape": "star",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r1_c0_n0",
+      "label": "● Art 0",
+      "x": 710,
+      "y": 0,
+      "kind": "active",
+      "extras": {
+        "description": "circle node in Art cluster",
+        "cost": 10,
+        "damage": 50,
+        "shape": "circle"
+      }
+    },
+    {
+      "id": "r1_c0_n1",
+      "label": "■ Art 1",
+      "x": 670,
+      "y": 69,
+      "kind": "active",
+      "extras": {
+        "description": "square node in Art cluster",
+        "cost": 10,
+        "damage": 50,
+        "shape": "square"
+      }
+    },
+    {
+      "id": "r1_c0_n2",
+      "label": "◆ Art 2",
+      "x": 590,
+      "y": 69,
+      "kind": "active",
+      "extras": {
+        "description": "diamond node in Art cluster",
+        "cost": 10,
+        "damage": 50,
+        "shape": "diamond"
+      }
+    },
+    {
+      "id": "r1_c0_n3",
+      "label": "▲ Art 3",
+      "x": 550,
+      "y": 0,
+      "kind": "active",
+      "extras": {
+        "description": "triangle node in Art cluster",
+        "cost": 10,
+        "damage": 50,
+        "shape": "triangle"
+      }
+    },
+    {
+      "id": "r1_c0_n4",
+      "label": "● Art 4",
+      "x": 590,
+      "y": -69,
+      "kind": "active",
+      "extras": {
+        "description": "circle node in Art cluster",
+        "cost": 10,
+        "damage": 50,
+        "shape": "circle"
+      }
+    },
+    {
+      "id": "r1_c0_n5",
+      "label": "■ Art 5",
+      "x": 670,
+      "y": -69,
+      "kind": "active",
+      "extras": {
+        "description": "square node in Art cluster",
+        "cost": 10,
+        "damage": 50,
+        "shape": "square"
+      }
+    },
+    {
+      "id": "r1_c1_n0",
+      "label": "○ Art 0",
+      "x": 640,
+      "y": 300,
+      "kind": "active",
+      "extras": {
+        "description": "5-sided polygon node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "circle"
+      }
+    },
+    {
+      "id": "r1_c1_n1",
+      "label": "□ Art 1",
+      "x": 578,
+      "y": 386,
+      "kind": "active",
+      "extras": {
+        "description": "5-sided polygon node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "polygon"
+      }
+    },
+    {
+      "id": "r1_c1_n2",
+      "label": "◇ Art 2",
+      "x": 477,
+      "y": 353,
+      "kind": "active",
+      "extras": {
+        "description": "5-sided polygon node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "circle"
+      }
+    },
+    {
+      "id": "r1_c1_n3",
+      "label": "△ Art 3",
+      "x": 477,
+      "y": 247,
+      "kind": "active",
+      "extras": {
+        "description": "5-sided polygon node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "polygon"
+      }
+    },
+    {
+      "id": "r1_c1_n4",
+      "label": "☆ Art 4",
+      "x": 578,
+      "y": 214,
+      "kind": "active",
+      "extras": {
+        "description": "5-sided polygon node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "circle"
+      }
+    },
+    {
+      "id": "r1_c2_n0",
+      "label": "✧ Art 0",
+      "x": 370,
+      "y": 520,
+      "kind": "active",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "star"
+      }
+    },
+    {
+      "id": "r1_c2_n1",
+      "label": "✦ Art 1",
+      "x": 316,
+      "y": 583,
+      "kind": "active",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "star"
+      }
+    },
+    {
+      "id": "r1_c2_n2",
+      "label": "✪ Art 2",
+      "x": 249,
+      "y": 481,
+      "kind": "active",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "star"
+      }
+    },
+    {
+      "id": "r1_c2_n3",
+      "label": "✰ Art 3",
+      "x": 402,
+      "y": 430,
+      "kind": "active",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "star"
+      }
+    },
+    {
+      "id": "r1_c2_n4",
+      "label": "⋆ Art 4",
+      "x": 417,
+      "y": 629,
+      "kind": "active",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "star"
+      }
+    },
+    {
+      "id": "r1_c2_n5",
+      "label": "∘ Art 5",
+      "x": 181,
+      "y": 592,
+      "kind": "active",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "star"
+      }
+    },
+    {
+      "id": "r1_c2_n6",
+      "label": "∙ Art 6",
+      "x": 288,
+      "y": 335,
+      "kind": "active",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "star"
+      }
+    },
+    {
+      "id": "r1_c3_n0",
+      "label": "╋ Art 0",
+      "x": 90,
+      "y": 600,
+      "kind": "active",
+      "extras": {
+        "description": "Cross pattern node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "cross"
+      }
+    },
+    {
+      "id": "r1_c3_n1",
+      "label": "┼ Art 1",
+      "x": 30,
+      "y": 660,
+      "kind": "active",
+      "extras": {
+        "description": "Cross pattern node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "cross"
+      }
+    },
+    {
+      "id": "r1_c3_n2",
+      "label": "╂ Art 2",
+      "x": 120,
+      "y": 600,
+      "kind": "active",
+      "extras": {
+        "description": "Cross pattern node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "cross"
+      }
+    },
+    {
+      "id": "r1_c3_n3",
+      "label": "┿ Art 3",
+      "x": 30,
+      "y": 690,
+      "kind": "active",
+      "extras": {
+        "description": "Cross pattern node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "cross"
+      }
+    },
+    {
+      "id": "r1_c3_n4",
+      "label": "╬ Art 4",
+      "x": 150,
+      "y": 600,
+      "kind": "active",
+      "extras": {
+        "description": "Cross pattern node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "cross"
+      }
+    },
+    {
+      "id": "r1_c3_n5",
+      "label": "╋ Art 5",
+      "x": 30,
+      "y": 720,
+      "kind": "active",
+      "extras": {
+        "description": "Cross pattern node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "cross"
+      }
+    },
+    {
+      "id": "r1_c4_n0",
+      "label": "◉ Art 0",
+      "x": -230,
+      "y": 520,
+      "kind": "active",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "ring"
+      }
+    },
+    {
+      "id": "r1_c4_n1",
+      "label": "◉ Art 1",
+      "x": -290,
+      "y": 555,
+      "kind": "active",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "ring"
+      }
+    },
+    {
+      "id": "r1_c4_n2",
+      "label": "◉ Art 2",
+      "x": -290,
+      "y": 485,
+      "kind": "active",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "ring"
+      }
+    },
+    {
+      "id": "r1_c4_n3",
+      "label": "◍ Art 3",
+      "x": -190,
+      "y": 520,
+      "kind": "active",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "ring"
+      }
+    },
+    {
+      "id": "r1_c4_n4",
+      "label": "◍ Art 4",
+      "x": -230,
+      "y": 589,
+      "kind": "active",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "ring"
+      }
+    },
+    {
+      "id": "r1_c4_n5",
+      "label": "◍ Art 5",
+      "x": -310,
+      "y": 589,
+      "kind": "active",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "ring"
+      }
+    },
+    {
+      "id": "r1_c4_n6",
+      "label": "◍ Art 6",
+      "x": -350,
+      "y": 520,
+      "kind": "active",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "ring"
+      }
+    },
+    {
+      "id": "r1_c4_n7",
+      "label": "◍ Art 7",
+      "x": -310,
+      "y": 451,
+      "kind": "active",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "ring"
+      }
+    },
+    {
+      "id": "r1_c4_n8",
+      "label": "◍ Art 8",
+      "x": -230,
+      "y": 451,
+      "kind": "active",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "ring"
+      }
+    },
+    {
+      "id": "r1_c5_n0",
+      "label": "○ Art 0",
+      "x": -405,
+      "y": 300,
+      "kind": "active",
+      "extras": {
+        "description": "6-sided polygon node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "circle"
+      }
+    },
+    {
+      "id": "r1_c5_n1",
+      "label": "□ Art 1",
+      "x": -447,
+      "y": 374,
+      "kind": "active",
+      "extras": {
+        "description": "6-sided polygon node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "polygon"
+      }
+    },
+    {
+      "id": "r1_c5_n2",
+      "label": "◇ Art 2",
+      "x": -532,
+      "y": 374,
+      "kind": "active",
+      "extras": {
+        "description": "6-sided polygon node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "circle"
+      }
+    },
+    {
+      "id": "r1_c5_n3",
+      "label": "△ Art 3",
+      "x": -575,
+      "y": 300,
+      "kind": "active",
+      "extras": {
+        "description": "6-sided polygon node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "polygon"
+      }
+    },
+    {
+      "id": "r1_c5_n4",
+      "label": "☆ Art 4",
+      "x": -532,
+      "y": 226,
+      "kind": "active",
+      "extras": {
+        "description": "6-sided polygon node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "circle"
+      }
+    },
+    {
+      "id": "r1_c5_n5",
+      "label": "☾ Art 5",
+      "x": -447,
+      "y": 226,
+      "kind": "active",
+      "extras": {
+        "description": "6-sided polygon node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "polygon"
+      }
+    },
+    {
+      "id": "r1_c6_n0",
+      "label": "● Art 0",
+      "x": -490,
+      "y": 0,
+      "kind": "active",
+      "extras": {
+        "description": "circle node in Art cluster",
+        "cost": 10,
+        "damage": 50,
+        "shape": "circle"
+      }
+    },
+    {
+      "id": "r1_c6_n1",
+      "label": "■ Art 1",
+      "x": -530,
+      "y": 69,
+      "kind": "active",
+      "extras": {
+        "description": "square node in Art cluster",
+        "cost": 10,
+        "damage": 50,
+        "shape": "square"
+      }
+    },
+    {
+      "id": "r1_c6_n2",
+      "label": "◆ Art 2",
+      "x": -610,
+      "y": 69,
+      "kind": "active",
+      "extras": {
+        "description": "diamond node in Art cluster",
+        "cost": 10,
+        "damage": 50,
+        "shape": "diamond"
+      }
+    },
+    {
+      "id": "r1_c6_n3",
+      "label": "▲ Art 3",
+      "x": -650,
+      "y": 0,
+      "kind": "active",
+      "extras": {
+        "description": "triangle node in Art cluster",
+        "cost": 10,
+        "damage": 50,
+        "shape": "triangle"
+      }
+    },
+    {
+      "id": "r1_c6_n4",
+      "label": "● Art 4",
+      "x": -610,
+      "y": -69,
+      "kind": "active",
+      "extras": {
+        "description": "circle node in Art cluster",
+        "cost": 10,
+        "damage": 50,
+        "shape": "circle"
+      }
+    },
+    {
+      "id": "r1_c6_n5",
+      "label": "■ Art 5",
+      "x": -530,
+      "y": -69,
+      "kind": "active",
+      "extras": {
+        "description": "square node in Art cluster",
+        "cost": 10,
+        "damage": 50,
+        "shape": "square"
+      }
+    },
+    {
+      "id": "r1_c7_n0",
+      "label": "○ Art 0",
+      "x": -400,
+      "y": -300,
+      "kind": "active",
+      "extras": {
+        "description": "5-sided polygon node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "circle"
+      }
+    },
+    {
+      "id": "r1_c7_n1",
+      "label": "□ Art 1",
+      "x": -462,
+      "y": -214,
+      "kind": "active",
+      "extras": {
+        "description": "5-sided polygon node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "polygon"
+      }
+    },
+    {
+      "id": "r1_c7_n2",
+      "label": "◇ Art 2",
+      "x": -563,
+      "y": -247,
+      "kind": "active",
+      "extras": {
+        "description": "5-sided polygon node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "circle"
+      }
+    },
+    {
+      "id": "r1_c7_n3",
+      "label": "△ Art 3",
+      "x": -563,
+      "y": -353,
+      "kind": "active",
+      "extras": {
+        "description": "5-sided polygon node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "polygon"
+      }
+    },
+    {
+      "id": "r1_c7_n4",
+      "label": "☆ Art 4",
+      "x": -462,
+      "y": -386,
+      "kind": "active",
+      "extras": {
+        "description": "5-sided polygon node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "circle"
+      }
+    },
+    {
+      "id": "r1_c8_n0",
+      "label": "✧ Art 0",
+      "x": -230,
+      "y": -520,
+      "kind": "active",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "star"
+      }
+    },
+    {
+      "id": "r1_c8_n1",
+      "label": "✦ Art 1",
+      "x": -284,
+      "y": -457,
+      "kind": "active",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "star"
+      }
+    },
+    {
+      "id": "r1_c8_n2",
+      "label": "✪ Art 2",
+      "x": -351,
+      "y": -559,
+      "kind": "active",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "star"
+      }
+    },
+    {
+      "id": "r1_c8_n3",
+      "label": "✰ Art 3",
+      "x": -198,
+      "y": -610,
+      "kind": "active",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "star"
+      }
+    },
+    {
+      "id": "r1_c8_n4",
+      "label": "⋆ Art 4",
+      "x": -183,
+      "y": -411,
+      "kind": "active",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "star"
+      }
+    },
+    {
+      "id": "r1_c8_n5",
+      "label": "∘ Art 5",
+      "x": -419,
+      "y": -448,
+      "kind": "active",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "star"
+      }
+    },
+    {
+      "id": "r1_c8_n6",
+      "label": "∙ Art 6",
+      "x": -312,
+      "y": -705,
+      "kind": "active",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "star"
+      }
+    },
+    {
+      "id": "r1_c9_n0",
+      "label": "╋ Art 0",
+      "x": 90,
+      "y": -600,
+      "kind": "active",
+      "extras": {
+        "description": "Cross pattern node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "cross"
+      }
+    },
+    {
+      "id": "r1_c9_n1",
+      "label": "┼ Art 1",
+      "x": 30,
+      "y": -540,
+      "kind": "active",
+      "extras": {
+        "description": "Cross pattern node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "cross"
+      }
+    },
+    {
+      "id": "r1_c9_n2",
+      "label": "╂ Art 2",
+      "x": 120,
+      "y": -600,
+      "kind": "active",
+      "extras": {
+        "description": "Cross pattern node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "cross"
+      }
+    },
+    {
+      "id": "r1_c9_n3",
+      "label": "┿ Art 3",
+      "x": 30,
+      "y": -510,
+      "kind": "active",
+      "extras": {
+        "description": "Cross pattern node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "cross"
+      }
+    },
+    {
+      "id": "r1_c9_n4",
+      "label": "╬ Art 4",
+      "x": 150,
+      "y": -600,
+      "kind": "active",
+      "extras": {
+        "description": "Cross pattern node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "cross"
+      }
+    },
+    {
+      "id": "r1_c9_n5",
+      "label": "╋ Art 5",
+      "x": 30,
+      "y": -480,
+      "kind": "active",
+      "extras": {
+        "description": "Cross pattern node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "cross"
+      }
+    },
+    {
+      "id": "r1_c10_n0",
+      "label": "◉ Art 0",
+      "x": 370,
+      "y": -520,
+      "kind": "active",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "ring"
+      }
+    },
+    {
+      "id": "r1_c10_n1",
+      "label": "◉ Art 1",
+      "x": 310,
+      "y": -485,
+      "kind": "active",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "ring"
+      }
+    },
+    {
+      "id": "r1_c10_n2",
+      "label": "◉ Art 2",
+      "x": 310,
+      "y": -555,
+      "kind": "active",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "ring"
+      }
+    },
+    {
+      "id": "r1_c10_n3",
+      "label": "◍ Art 3",
+      "x": 410,
+      "y": -520,
+      "kind": "active",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "ring"
+      }
+    },
+    {
+      "id": "r1_c10_n4",
+      "label": "◍ Art 4",
+      "x": 370,
+      "y": -451,
+      "kind": "active",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "ring"
+      }
+    },
+    {
+      "id": "r1_c10_n5",
+      "label": "◍ Art 5",
+      "x": 290,
+      "y": -451,
+      "kind": "active",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "ring"
+      }
+    },
+    {
+      "id": "r1_c10_n6",
+      "label": "◍ Art 6",
+      "x": 250,
+      "y": -520,
+      "kind": "active",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "ring"
+      }
+    },
+    {
+      "id": "r1_c10_n7",
+      "label": "◍ Art 7",
+      "x": 290,
+      "y": -589,
+      "kind": "active",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "ring"
+      }
+    },
+    {
+      "id": "r1_c10_n8",
+      "label": "◍ Art 8",
+      "x": 370,
+      "y": -589,
+      "kind": "active",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "ring"
+      }
+    },
+    {
+      "id": "r1_c11_n0",
+      "label": "○ Art 0",
+      "x": 635,
+      "y": -300,
+      "kind": "active",
+      "extras": {
+        "description": "6-sided polygon node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "circle"
+      }
+    },
+    {
+      "id": "r1_c11_n1",
+      "label": "□ Art 1",
+      "x": 593,
+      "y": -226,
+      "kind": "active",
+      "extras": {
+        "description": "6-sided polygon node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "polygon"
+      }
+    },
+    {
+      "id": "r1_c11_n2",
+      "label": "◇ Art 2",
+      "x": 508,
+      "y": -226,
+      "kind": "active",
+      "extras": {
+        "description": "6-sided polygon node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "circle"
+      }
+    },
+    {
+      "id": "r1_c11_n3",
+      "label": "△ Art 3",
+      "x": 465,
+      "y": -300,
+      "kind": "active",
+      "extras": {
+        "description": "6-sided polygon node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "polygon"
+      }
+    },
+    {
+      "id": "r1_c11_n4",
+      "label": "☆ Art 4",
+      "x": 507,
+      "y": -374,
+      "kind": "active",
+      "extras": {
+        "description": "6-sided polygon node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "circle"
+      }
+    },
+    {
+      "id": "r1_c11_n5",
+      "label": "☾ Art 5",
+      "x": 593,
+      "y": -374,
+      "kind": "active",
+      "extras": {
+        "description": "6-sided polygon node",
+        "cost": 10,
+        "damage": 50,
+        "shape": "polygon"
+      }
+    },
+    {
+      "id": "r2_c0_n0",
+      "label": "○ Whisper 0",
+      "x": 1086,
+      "y": 259,
+      "kind": "passive",
+      "extras": {
+        "description": "5-sided polygon node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "circle"
+      }
+    },
+    {
+      "id": "r2_c0_n1",
+      "label": "□ Whisper 1",
+      "x": 1024,
+      "y": 345,
+      "kind": "passive",
+      "extras": {
+        "description": "5-sided polygon node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "polygon"
+      }
+    },
+    {
+      "id": "r2_c0_n2",
+      "label": "◇ Whisper 2",
+      "x": 923,
+      "y": 312,
+      "kind": "passive",
+      "extras": {
+        "description": "5-sided polygon node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "circle"
+      }
+    },
+    {
+      "id": "r2_c0_n3",
+      "label": "△ Whisper 3",
+      "x": 923,
+      "y": 206,
+      "kind": "passive",
+      "extras": {
+        "description": "5-sided polygon node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "polygon"
+      }
+    },
+    {
+      "id": "r2_c0_n4",
+      "label": "☆ Whisper 4",
+      "x": 1024,
+      "y": 173,
+      "kind": "passive",
+      "extras": {
+        "description": "5-sided polygon node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "circle"
+      }
+    },
+    {
+      "id": "r2_c1_n0",
+      "label": "✧ Whisper 0",
+      "x": 777,
+      "y": 707,
+      "kind": "passive",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "star"
+      }
+    },
+    {
+      "id": "r2_c1_n1",
+      "label": "✦ Whisper 1",
+      "x": 723,
+      "y": 770,
+      "kind": "passive",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "star"
+      }
+    },
+    {
+      "id": "r2_c1_n2",
+      "label": "✪ Whisper 2",
+      "x": 656,
+      "y": 668,
+      "kind": "passive",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "star"
+      }
+    },
+    {
+      "id": "r2_c1_n3",
+      "label": "✰ Whisper 3",
+      "x": 809,
+      "y": 617,
+      "kind": "passive",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "star"
+      }
+    },
+    {
+      "id": "r2_c1_n4",
+      "label": "⋆ Whisper 4",
+      "x": 824,
+      "y": 816,
+      "kind": "passive",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "star"
+      }
+    },
+    {
+      "id": "r2_c1_n5",
+      "label": "∘ Whisper 5",
+      "x": 588,
+      "y": 779,
+      "kind": "passive",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "star"
+      }
+    },
+    {
+      "id": "r2_c1_n6",
+      "label": "∙ Whisper 6",
+      "x": 695,
+      "y": 522,
+      "kind": "passive",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "star"
+      }
+    },
+    {
+      "id": "r2_c2_n0",
+      "label": "╋ Whisper 0",
+      "x": 349,
+      "y": 966,
+      "kind": "passive",
+      "extras": {
+        "description": "Cross pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "cross"
+      }
+    },
+    {
+      "id": "r2_c2_n1",
+      "label": "┼ Whisper 1",
+      "x": 289,
+      "y": 1026,
+      "kind": "passive",
+      "extras": {
+        "description": "Cross pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "cross"
+      }
+    },
+    {
+      "id": "r2_c2_n2",
+      "label": "╂ Whisper 2",
+      "x": 379,
+      "y": 966,
+      "kind": "passive",
+      "extras": {
+        "description": "Cross pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "cross"
+      }
+    },
+    {
+      "id": "r2_c2_n3",
+      "label": "┿ Whisper 3",
+      "x": 289,
+      "y": 1056,
+      "kind": "passive",
+      "extras": {
+        "description": "Cross pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "cross"
+      }
+    },
+    {
+      "id": "r2_c2_n4",
+      "label": "╬ Whisper 4",
+      "x": 409,
+      "y": 966,
+      "kind": "passive",
+      "extras": {
+        "description": "Cross pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "cross"
+      }
+    },
+    {
+      "id": "r2_c2_n5",
+      "label": "╋ Whisper 5",
+      "x": 289,
+      "y": 1086,
+      "kind": "passive",
+      "extras": {
+        "description": "Cross pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "cross"
+      }
+    },
+    {
+      "id": "r2_c3_n0",
+      "label": "◉ Whisper 0",
+      "x": -189,
+      "y": 966,
+      "kind": "passive",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "ring"
+      }
+    },
+    {
+      "id": "r2_c3_n1",
+      "label": "◉ Whisper 1",
+      "x": -249,
+      "y": 1001,
+      "kind": "passive",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "ring"
+      }
+    },
+    {
+      "id": "r2_c3_n2",
+      "label": "◉ Whisper 2",
+      "x": -249,
+      "y": 931,
+      "kind": "passive",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "ring"
+      }
+    },
+    {
+      "id": "r2_c3_n3",
+      "label": "◍ Whisper 3",
+      "x": -149,
+      "y": 966,
+      "kind": "passive",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "ring"
+      }
+    },
+    {
+      "id": "r2_c3_n4",
+      "label": "◍ Whisper 4",
+      "x": -189,
+      "y": 1035,
+      "kind": "passive",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "ring"
+      }
+    },
+    {
+      "id": "r2_c3_n5",
+      "label": "◍ Whisper 5",
+      "x": -269,
+      "y": 1035,
+      "kind": "passive",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "ring"
+      }
+    },
+    {
+      "id": "r2_c3_n6",
+      "label": "◍ Whisper 6",
+      "x": -309,
+      "y": 966,
+      "kind": "passive",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "ring"
+      }
+    },
+    {
+      "id": "r2_c3_n7",
+      "label": "◍ Whisper 7",
+      "x": -269,
+      "y": 897,
+      "kind": "passive",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "ring"
+      }
+    },
+    {
+      "id": "r2_c3_n8",
+      "label": "◍ Whisper 8",
+      "x": -189,
+      "y": 897,
+      "kind": "passive",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "ring"
+      }
+    },
+    {
+      "id": "r2_c4_n0",
+      "label": "○ Whisper 0",
+      "x": -592,
+      "y": 707,
+      "kind": "passive",
+      "extras": {
+        "description": "6-sided polygon node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "circle"
+      }
+    },
+    {
+      "id": "r2_c4_n1",
+      "label": "□ Whisper 1",
+      "x": -634,
+      "y": 781,
+      "kind": "passive",
+      "extras": {
+        "description": "6-sided polygon node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "polygon"
+      }
+    },
+    {
+      "id": "r2_c4_n2",
+      "label": "◇ Whisper 2",
+      "x": -719,
+      "y": 781,
+      "kind": "passive",
+      "extras": {
+        "description": "6-sided polygon node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "circle"
+      }
+    },
+    {
+      "id": "r2_c4_n3",
+      "label": "△ Whisper 3",
+      "x": -762,
+      "y": 707,
+      "kind": "passive",
+      "extras": {
+        "description": "6-sided polygon node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "polygon"
+      }
+    },
+    {
+      "id": "r2_c4_n4",
+      "label": "☆ Whisper 4",
+      "x": -719,
+      "y": 633,
+      "kind": "passive",
+      "extras": {
+        "description": "6-sided polygon node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "circle"
+      }
+    },
+    {
+      "id": "r2_c4_n5",
+      "label": "☾ Whisper 5",
+      "x": -634,
+      "y": 633,
+      "kind": "passive",
+      "extras": {
+        "description": "6-sided polygon node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "polygon"
+      }
+    },
+    {
+      "id": "r2_c5_n0",
+      "label": "● Whisper 0",
+      "x": -856,
+      "y": 259,
+      "kind": "passive",
+      "extras": {
+        "description": "circle node in Whisper cluster",
+        "cost": 0,
+        "damage": 0,
+        "shape": "circle"
+      }
+    },
+    {
+      "id": "r2_c5_n1",
+      "label": "■ Whisper 1",
+      "x": -896,
+      "y": 328,
+      "kind": "passive",
+      "extras": {
+        "description": "square node in Whisper cluster",
+        "cost": 0,
+        "damage": 0,
+        "shape": "square"
+      }
+    },
+    {
+      "id": "r2_c5_n2",
+      "label": "◆ Whisper 2",
+      "x": -976,
+      "y": 328,
+      "kind": "passive",
+      "extras": {
+        "description": "diamond node in Whisper cluster",
+        "cost": 0,
+        "damage": 0,
+        "shape": "diamond"
+      }
+    },
+    {
+      "id": "r2_c5_n3",
+      "label": "▲ Whisper 3",
+      "x": -1016,
+      "y": 259,
+      "kind": "passive",
+      "extras": {
+        "description": "triangle node in Whisper cluster",
+        "cost": 0,
+        "damage": 0,
+        "shape": "triangle"
+      }
+    },
+    {
+      "id": "r2_c5_n4",
+      "label": "● Whisper 4",
+      "x": -976,
+      "y": 190,
+      "kind": "passive",
+      "extras": {
+        "description": "circle node in Whisper cluster",
+        "cost": 0,
+        "damage": 0,
+        "shape": "circle"
+      }
+    },
+    {
+      "id": "r2_c5_n5",
+      "label": "■ Whisper 5",
+      "x": -896,
+      "y": 190,
+      "kind": "passive",
+      "extras": {
+        "description": "square node in Whisper cluster",
+        "cost": 0,
+        "damage": 0,
+        "shape": "square"
+      }
+    },
+    {
+      "id": "r2_c6_n0",
+      "label": "○ Whisper 0",
+      "x": -846,
+      "y": -259,
+      "kind": "passive",
+      "extras": {
+        "description": "5-sided polygon node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "circle"
+      }
+    },
+    {
+      "id": "r2_c6_n1",
+      "label": "□ Whisper 1",
+      "x": -908,
+      "y": -173,
+      "kind": "passive",
+      "extras": {
+        "description": "5-sided polygon node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "polygon"
+      }
+    },
+    {
+      "id": "r2_c6_n2",
+      "label": "◇ Whisper 2",
+      "x": -1009,
+      "y": -206,
+      "kind": "passive",
+      "extras": {
+        "description": "5-sided polygon node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "circle"
+      }
+    },
+    {
+      "id": "r2_c6_n3",
+      "label": "△ Whisper 3",
+      "x": -1009,
+      "y": -312,
+      "kind": "passive",
+      "extras": {
+        "description": "5-sided polygon node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "polygon"
+      }
+    },
+    {
+      "id": "r2_c6_n4",
+      "label": "☆ Whisper 4",
+      "x": -908,
+      "y": -345,
+      "kind": "passive",
+      "extras": {
+        "description": "5-sided polygon node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "circle"
+      }
+    },
+    {
+      "id": "r2_c7_n0",
+      "label": "✧ Whisper 0",
+      "x": -637,
+      "y": -707,
+      "kind": "passive",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "star"
+      }
+    },
+    {
+      "id": "r2_c7_n1",
+      "label": "✦ Whisper 1",
+      "x": -691,
+      "y": -644,
+      "kind": "passive",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "star"
+      }
+    },
+    {
+      "id": "r2_c7_n2",
+      "label": "✪ Whisper 2",
+      "x": -758,
+      "y": -746,
+      "kind": "passive",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "star"
+      }
+    },
+    {
+      "id": "r2_c7_n3",
+      "label": "✰ Whisper 3",
+      "x": -605,
+      "y": -797,
+      "kind": "passive",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "star"
+      }
+    },
+    {
+      "id": "r2_c7_n4",
+      "label": "⋆ Whisper 4",
+      "x": -590,
+      "y": -598,
+      "kind": "passive",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "star"
+      }
+    },
+    {
+      "id": "r2_c7_n5",
+      "label": "∘ Whisper 5",
+      "x": -826,
+      "y": -635,
+      "kind": "passive",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "star"
+      }
+    },
+    {
+      "id": "r2_c7_n6",
+      "label": "∙ Whisper 6",
+      "x": -719,
+      "y": -892,
+      "kind": "passive",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "star"
+      }
+    },
+    {
+      "id": "r2_c8_n0",
+      "label": "╋ Whisper 0",
+      "x": -169,
+      "y": -966,
+      "kind": "passive",
+      "extras": {
+        "description": "Cross pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "cross"
+      }
+    },
+    {
+      "id": "r2_c8_n1",
+      "label": "┼ Whisper 1",
+      "x": -229,
+      "y": -906,
+      "kind": "passive",
+      "extras": {
+        "description": "Cross pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "cross"
+      }
+    },
+    {
+      "id": "r2_c8_n2",
+      "label": "╂ Whisper 2",
+      "x": -139,
+      "y": -966,
+      "kind": "passive",
+      "extras": {
+        "description": "Cross pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "cross"
+      }
+    },
+    {
+      "id": "r2_c8_n3",
+      "label": "┿ Whisper 3",
+      "x": -229,
+      "y": -876,
+      "kind": "passive",
+      "extras": {
+        "description": "Cross pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "cross"
+      }
+    },
+    {
+      "id": "r2_c8_n4",
+      "label": "╬ Whisper 4",
+      "x": -109,
+      "y": -966,
+      "kind": "passive",
+      "extras": {
+        "description": "Cross pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "cross"
+      }
+    },
+    {
+      "id": "r2_c8_n5",
+      "label": "╋ Whisper 5",
+      "x": -229,
+      "y": -846,
+      "kind": "passive",
+      "extras": {
+        "description": "Cross pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "cross"
+      }
+    },
+    {
+      "id": "r2_c9_n0",
+      "label": "◉ Whisper 0",
+      "x": 329,
+      "y": -966,
+      "kind": "passive",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "ring"
+      }
+    },
+    {
+      "id": "r2_c9_n1",
+      "label": "◉ Whisper 1",
+      "x": 269,
+      "y": -931,
+      "kind": "passive",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "ring"
+      }
+    },
+    {
+      "id": "r2_c9_n2",
+      "label": "◉ Whisper 2",
+      "x": 269,
+      "y": -1001,
+      "kind": "passive",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "ring"
+      }
+    },
+    {
+      "id": "r2_c9_n3",
+      "label": "◍ Whisper 3",
+      "x": 369,
+      "y": -966,
+      "kind": "passive",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "ring"
+      }
+    },
+    {
+      "id": "r2_c9_n4",
+      "label": "◍ Whisper 4",
+      "x": 329,
+      "y": -897,
+      "kind": "passive",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "ring"
+      }
+    },
+    {
+      "id": "r2_c9_n5",
+      "label": "◍ Whisper 5",
+      "x": 249,
+      "y": -897,
+      "kind": "passive",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "ring"
+      }
+    },
+    {
+      "id": "r2_c9_n6",
+      "label": "◍ Whisper 6",
+      "x": 209,
+      "y": -966,
+      "kind": "passive",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "ring"
+      }
+    },
+    {
+      "id": "r2_c9_n7",
+      "label": "◍ Whisper 7",
+      "x": 249,
+      "y": -1035,
+      "kind": "passive",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "ring"
+      }
+    },
+    {
+      "id": "r2_c9_n8",
+      "label": "◍ Whisper 8",
+      "x": 329,
+      "y": -1035,
+      "kind": "passive",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "ring"
+      }
+    },
+    {
+      "id": "r2_c10_n0",
+      "label": "○ Whisper 0",
+      "x": 822,
+      "y": -707,
+      "kind": "passive",
+      "extras": {
+        "description": "6-sided polygon node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "circle"
+      }
+    },
+    {
+      "id": "r2_c10_n1",
+      "label": "□ Whisper 1",
+      "x": 780,
+      "y": -633,
+      "kind": "passive",
+      "extras": {
+        "description": "6-sided polygon node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "polygon"
+      }
+    },
+    {
+      "id": "r2_c10_n2",
+      "label": "◇ Whisper 2",
+      "x": 695,
+      "y": -633,
+      "kind": "passive",
+      "extras": {
+        "description": "6-sided polygon node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "circle"
+      }
+    },
+    {
+      "id": "r2_c10_n3",
+      "label": "△ Whisper 3",
+      "x": 652,
+      "y": -707,
+      "kind": "passive",
+      "extras": {
+        "description": "6-sided polygon node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "polygon"
+      }
+    },
+    {
+      "id": "r2_c10_n4",
+      "label": "☆ Whisper 4",
+      "x": 695,
+      "y": -781,
+      "kind": "passive",
+      "extras": {
+        "description": "6-sided polygon node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "circle"
+      }
+    },
+    {
+      "id": "r2_c10_n5",
+      "label": "☾ Whisper 5",
+      "x": 780,
+      "y": -781,
+      "kind": "passive",
+      "extras": {
+        "description": "6-sided polygon node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "polygon"
+      }
+    },
+    {
+      "id": "r2_c11_n0",
+      "label": "● Whisper 0",
+      "x": 1076,
+      "y": -259,
+      "kind": "passive",
+      "extras": {
+        "description": "circle node in Whisper cluster",
+        "cost": 0,
+        "damage": 0,
+        "shape": "circle"
+      }
+    },
+    {
+      "id": "r2_c11_n1",
+      "label": "■ Whisper 1",
+      "x": 1036,
+      "y": -190,
+      "kind": "passive",
+      "extras": {
+        "description": "square node in Whisper cluster",
+        "cost": 0,
+        "damage": 0,
+        "shape": "square"
+      }
+    },
+    {
+      "id": "r2_c11_n2",
+      "label": "◆ Whisper 2",
+      "x": 956,
+      "y": -190,
+      "kind": "passive",
+      "extras": {
+        "description": "diamond node in Whisper cluster",
+        "cost": 0,
+        "damage": 0,
+        "shape": "diamond"
+      }
+    },
+    {
+      "id": "r2_c11_n3",
+      "label": "▲ Whisper 3",
+      "x": 916,
+      "y": -259,
+      "kind": "passive",
+      "extras": {
+        "description": "triangle node in Whisper cluster",
+        "cost": 0,
+        "damage": 0,
+        "shape": "triangle"
+      }
+    },
+    {
+      "id": "r2_c11_n4",
+      "label": "● Whisper 4",
+      "x": 956,
+      "y": -328,
+      "kind": "passive",
+      "extras": {
+        "description": "circle node in Whisper cluster",
+        "cost": 0,
+        "damage": 0,
+        "shape": "circle"
+      }
+    },
+    {
+      "id": "r2_c11_n5",
+      "label": "■ Whisper 5",
+      "x": 1036,
+      "y": -328,
+      "kind": "passive",
+      "extras": {
+        "description": "square node in Whisper cluster",
+        "cost": 0,
+        "damage": 0,
+        "shape": "square"
+      }
+    },
+    {
+      "id": "r3_c0_n0",
+      "label": "🔷 ✧ Keystone 0",
+      "x": 1470,
+      "y": 0,
+      "kind": "fixed",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "star",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c0_n1",
+      "label": "🔷 ✦ Keystone 1",
+      "x": 1416,
+      "y": 63,
+      "kind": "fixed",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "star",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c0_n2",
+      "label": "🔷 ✪ Keystone 2",
+      "x": 1349,
+      "y": -39,
+      "kind": "fixed",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "star",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c0_n3",
+      "label": "🔷 ✰ Keystone 3",
+      "x": 1502,
+      "y": -90,
+      "kind": "fixed",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "star",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c0_n4",
+      "label": "🔷 ⋆ Keystone 4",
+      "x": 1517,
+      "y": 109,
+      "kind": "fixed",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "star",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c0_n5",
+      "label": "🔷 ∘ Keystone 5",
+      "x": 1281,
+      "y": 72,
+      "kind": "fixed",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "star",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c0_n6",
+      "label": "🔷 ∙ Keystone 6",
+      "x": 1388,
+      "y": -185,
+      "kind": "fixed",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "star",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c1_n0",
+      "label": "🔷 ╋ Keystone 0",
+      "x": 1302,
+      "y": 700,
+      "kind": "fixed",
+      "extras": {
+        "description": "Cross pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "cross",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c1_n1",
+      "label": "🔷 ┼ Keystone 1",
+      "x": 1242,
+      "y": 760,
+      "kind": "fixed",
+      "extras": {
+        "description": "Cross pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "cross",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c1_n2",
+      "label": "🔷 ╂ Keystone 2",
+      "x": 1332,
+      "y": 700,
+      "kind": "fixed",
+      "extras": {
+        "description": "Cross pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "cross",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c1_n3",
+      "label": "🔷 ┿ Keystone 3",
+      "x": 1242,
+      "y": 790,
+      "kind": "fixed",
+      "extras": {
+        "description": "Cross pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "cross",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c1_n4",
+      "label": "🔷 ╬ Keystone 4",
+      "x": 1362,
+      "y": 700,
+      "kind": "fixed",
+      "extras": {
+        "description": "Cross pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "cross",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c1_n5",
+      "label": "🔷 ╋ Keystone 5",
+      "x": 1242,
+      "y": 820,
+      "kind": "fixed",
+      "extras": {
+        "description": "Cross pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "cross",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c2_n0",
+      "label": "🔷 ◉ Keystone 0",
+      "x": 770,
+      "y": 1212,
+      "kind": "fixed",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "ring",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c2_n1",
+      "label": "🔷 ◉ Keystone 1",
+      "x": 710,
+      "y": 1247,
+      "kind": "fixed",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "ring",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c2_n2",
+      "label": "🔷 ◉ Keystone 2",
+      "x": 710,
+      "y": 1177,
+      "kind": "fixed",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "ring",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c2_n3",
+      "label": "🔷 ◍ Keystone 3",
+      "x": 810,
+      "y": 1212,
+      "kind": "fixed",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "ring",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c2_n4",
+      "label": "🔷 ◍ Keystone 4",
+      "x": 770,
+      "y": 1281,
+      "kind": "fixed",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "ring",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c2_n5",
+      "label": "🔷 ◍ Keystone 5",
+      "x": 690,
+      "y": 1281,
+      "kind": "fixed",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "ring",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c2_n6",
+      "label": "🔷 ◍ Keystone 6",
+      "x": 650,
+      "y": 1212,
+      "kind": "fixed",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "ring",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c2_n7",
+      "label": "🔷 ◍ Keystone 7",
+      "x": 690,
+      "y": 1143,
+      "kind": "fixed",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "ring",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c2_n8",
+      "label": "🔷 ◍ Keystone 8",
+      "x": 770,
+      "y": 1143,
+      "kind": "fixed",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "ring",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c3_n0",
+      "label": "🔷 ○ Keystone 0",
+      "x": 115,
+      "y": 1400,
+      "kind": "fixed",
+      "extras": {
+        "description": "6-sided polygon node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "circle",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c3_n1",
+      "label": "🔷 □ Keystone 1",
+      "x": 73,
+      "y": 1474,
+      "kind": "fixed",
+      "extras": {
+        "description": "6-sided polygon node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "polygon",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c3_n2",
+      "label": "🔷 ◇ Keystone 2",
+      "x": -12,
+      "y": 1474,
+      "kind": "fixed",
+      "extras": {
+        "description": "6-sided polygon node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "circle",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c3_n3",
+      "label": "🔷 △ Keystone 3",
+      "x": -55,
+      "y": 1400,
+      "kind": "fixed",
+      "extras": {
+        "description": "6-sided polygon node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "polygon",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c3_n4",
+      "label": "🔷 ☆ Keystone 4",
+      "x": -13,
+      "y": 1326,
+      "kind": "fixed",
+      "extras": {
+        "description": "6-sided polygon node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "circle",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c3_n5",
+      "label": "🔷 ☾ Keystone 5",
+      "x": 73,
+      "y": 1326,
+      "kind": "fixed",
+      "extras": {
+        "description": "6-sided polygon node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "polygon",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c4_n0",
+      "label": "🔷 ● Keystone 0",
+      "x": -590,
+      "y": 1212,
+      "kind": "fixed",
+      "extras": {
+        "description": "circle node in Keystone cluster",
+        "cost": 0,
+        "damage": 0,
+        "shape": "circle",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c4_n1",
+      "label": "🔷 ■ Keystone 1",
+      "x": -630,
+      "y": 1281,
+      "kind": "fixed",
+      "extras": {
+        "description": "square node in Keystone cluster",
+        "cost": 0,
+        "damage": 0,
+        "shape": "square",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c4_n2",
+      "label": "🔷 ◆ Keystone 2",
+      "x": -710,
+      "y": 1281,
+      "kind": "fixed",
+      "extras": {
+        "description": "diamond node in Keystone cluster",
+        "cost": 0,
+        "damage": 0,
+        "shape": "diamond",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c4_n3",
+      "label": "🔷 ▲ Keystone 3",
+      "x": -750,
+      "y": 1212,
+      "kind": "fixed",
+      "extras": {
+        "description": "triangle node in Keystone cluster",
+        "cost": 0,
+        "damage": 0,
+        "shape": "triangle",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c4_n4",
+      "label": "🔷 ● Keystone 4",
+      "x": -710,
+      "y": 1143,
+      "kind": "fixed",
+      "extras": {
+        "description": "circle node in Keystone cluster",
+        "cost": 0,
+        "damage": 0,
+        "shape": "circle",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c4_n5",
+      "label": "🔷 ■ Keystone 5",
+      "x": -630,
+      "y": 1143,
+      "kind": "fixed",
+      "extras": {
+        "description": "square node in Keystone cluster",
+        "cost": 0,
+        "damage": 0,
+        "shape": "square",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c5_n0",
+      "label": "🔷 ○ Keystone 0",
+      "x": -1092,
+      "y": 700,
+      "kind": "fixed",
+      "extras": {
+        "description": "5-sided polygon node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "circle",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c5_n1",
+      "label": "🔷 □ Keystone 1",
+      "x": -1154,
+      "y": 786,
+      "kind": "fixed",
+      "extras": {
+        "description": "5-sided polygon node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "polygon",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c5_n2",
+      "label": "🔷 ◇ Keystone 2",
+      "x": -1255,
+      "y": 753,
+      "kind": "fixed",
+      "extras": {
+        "description": "5-sided polygon node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "circle",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c5_n3",
+      "label": "🔷 △ Keystone 3",
+      "x": -1255,
+      "y": 647,
+      "kind": "fixed",
+      "extras": {
+        "description": "5-sided polygon node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "polygon",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c5_n4",
+      "label": "🔷 ☆ Keystone 4",
+      "x": -1154,
+      "y": 614,
+      "kind": "fixed",
+      "extras": {
+        "description": "5-sided polygon node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "circle",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c6_n0",
+      "label": "🔷 ✧ Keystone 0",
+      "x": -1330,
+      "y": 0,
+      "kind": "fixed",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "star",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c6_n1",
+      "label": "🔷 ✦ Keystone 1",
+      "x": -1384,
+      "y": 63,
+      "kind": "fixed",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "star",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c6_n2",
+      "label": "🔷 ✪ Keystone 2",
+      "x": -1451,
+      "y": -39,
+      "kind": "fixed",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "star",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c6_n3",
+      "label": "🔷 ✰ Keystone 3",
+      "x": -1298,
+      "y": -90,
+      "kind": "fixed",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "star",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c6_n4",
+      "label": "🔷 ⋆ Keystone 4",
+      "x": -1283,
+      "y": 109,
+      "kind": "fixed",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "star",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c6_n5",
+      "label": "🔷 ∘ Keystone 5",
+      "x": -1519,
+      "y": 72,
+      "kind": "fixed",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "star",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c6_n6",
+      "label": "🔷 ∙ Keystone 6",
+      "x": -1412,
+      "y": -185,
+      "kind": "fixed",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "star",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c7_n0",
+      "label": "🔷 ╋ Keystone 0",
+      "x": -1122,
+      "y": -700,
+      "kind": "fixed",
+      "extras": {
+        "description": "Cross pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "cross",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c7_n1",
+      "label": "🔷 ┼ Keystone 1",
+      "x": -1182,
+      "y": -640,
+      "kind": "fixed",
+      "extras": {
+        "description": "Cross pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "cross",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c7_n2",
+      "label": "🔷 ╂ Keystone 2",
+      "x": -1092,
+      "y": -700,
+      "kind": "fixed",
+      "extras": {
+        "description": "Cross pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "cross",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c7_n3",
+      "label": "🔷 ┿ Keystone 3",
+      "x": -1182,
+      "y": -610,
+      "kind": "fixed",
+      "extras": {
+        "description": "Cross pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "cross",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c7_n4",
+      "label": "🔷 ╬ Keystone 4",
+      "x": -1062,
+      "y": -700,
+      "kind": "fixed",
+      "extras": {
+        "description": "Cross pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "cross",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c7_n5",
+      "label": "🔷 ╋ Keystone 5",
+      "x": -1182,
+      "y": -580,
+      "kind": "fixed",
+      "extras": {
+        "description": "Cross pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "cross",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c8_n0",
+      "label": "🔷 ◉ Keystone 0",
+      "x": -630,
+      "y": -1212,
+      "kind": "fixed",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "ring",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c8_n1",
+      "label": "🔷 ◉ Keystone 1",
+      "x": -690,
+      "y": -1177,
+      "kind": "fixed",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "ring",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c8_n2",
+      "label": "🔷 ◉ Keystone 2",
+      "x": -690,
+      "y": -1247,
+      "kind": "fixed",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "ring",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c8_n3",
+      "label": "🔷 ◍ Keystone 3",
+      "x": -590,
+      "y": -1212,
+      "kind": "fixed",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "ring",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c8_n4",
+      "label": "🔷 ◍ Keystone 4",
+      "x": -630,
+      "y": -1143,
+      "kind": "fixed",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "ring",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c8_n5",
+      "label": "🔷 ◍ Keystone 5",
+      "x": -710,
+      "y": -1143,
+      "kind": "fixed",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "ring",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c8_n6",
+      "label": "🔷 ◍ Keystone 6",
+      "x": -750,
+      "y": -1212,
+      "kind": "fixed",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "ring",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c8_n7",
+      "label": "🔷 ◍ Keystone 7",
+      "x": -710,
+      "y": -1281,
+      "kind": "fixed",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "ring",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c8_n8",
+      "label": "🔷 ◍ Keystone 8",
+      "x": -630,
+      "y": -1281,
+      "kind": "fixed",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "ring",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c9_n0",
+      "label": "🔷 ○ Keystone 0",
+      "x": 115,
+      "y": -1400,
+      "kind": "fixed",
+      "extras": {
+        "description": "6-sided polygon node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "circle",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c9_n1",
+      "label": "🔷 □ Keystone 1",
+      "x": 73,
+      "y": -1326,
+      "kind": "fixed",
+      "extras": {
+        "description": "6-sided polygon node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "polygon",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c9_n2",
+      "label": "🔷 ◇ Keystone 2",
+      "x": -12,
+      "y": -1326,
+      "kind": "fixed",
+      "extras": {
+        "description": "6-sided polygon node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "circle",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c9_n3",
+      "label": "🔷 △ Keystone 3",
+      "x": -55,
+      "y": -1400,
+      "kind": "fixed",
+      "extras": {
+        "description": "6-sided polygon node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "polygon",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c9_n4",
+      "label": "🔷 ☆ Keystone 4",
+      "x": -13,
+      "y": -1474,
+      "kind": "fixed",
+      "extras": {
+        "description": "6-sided polygon node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "circle",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c9_n5",
+      "label": "🔷 ☾ Keystone 5",
+      "x": 73,
+      "y": -1474,
+      "kind": "fixed",
+      "extras": {
+        "description": "6-sided polygon node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "polygon",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c10_n0",
+      "label": "🔷 ● Keystone 0",
+      "x": 810,
+      "y": -1212,
+      "kind": "fixed",
+      "extras": {
+        "description": "circle node in Keystone cluster",
+        "cost": 0,
+        "damage": 0,
+        "shape": "circle",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c10_n1",
+      "label": "🔷 ■ Keystone 1",
+      "x": 770,
+      "y": -1143,
+      "kind": "fixed",
+      "extras": {
+        "description": "square node in Keystone cluster",
+        "cost": 0,
+        "damage": 0,
+        "shape": "square",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c10_n2",
+      "label": "🔷 ◆ Keystone 2",
+      "x": 690,
+      "y": -1143,
+      "kind": "fixed",
+      "extras": {
+        "description": "diamond node in Keystone cluster",
+        "cost": 0,
+        "damage": 0,
+        "shape": "diamond",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c10_n3",
+      "label": "🔷 ▲ Keystone 3",
+      "x": 650,
+      "y": -1212,
+      "kind": "fixed",
+      "extras": {
+        "description": "triangle node in Keystone cluster",
+        "cost": 0,
+        "damage": 0,
+        "shape": "triangle",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c10_n4",
+      "label": "🔷 ● Keystone 4",
+      "x": 690,
+      "y": -1281,
+      "kind": "fixed",
+      "extras": {
+        "description": "circle node in Keystone cluster",
+        "cost": 0,
+        "damage": 0,
+        "shape": "circle",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c10_n5",
+      "label": "🔷 ■ Keystone 5",
+      "x": 770,
+      "y": -1281,
+      "kind": "fixed",
+      "extras": {
+        "description": "square node in Keystone cluster",
+        "cost": 0,
+        "damage": 0,
+        "shape": "square",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c11_n0",
+      "label": "🔷 ○ Keystone 0",
+      "x": 1332,
+      "y": -700,
+      "kind": "fixed",
+      "extras": {
+        "description": "5-sided polygon node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "circle",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c11_n1",
+      "label": "🔷 □ Keystone 1",
+      "x": 1270,
+      "y": -614,
+      "kind": "fixed",
+      "extras": {
+        "description": "5-sided polygon node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "polygon",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c11_n2",
+      "label": "🔷 ◇ Keystone 2",
+      "x": 1169,
+      "y": -647,
+      "kind": "fixed",
+      "extras": {
+        "description": "5-sided polygon node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "circle",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c11_n3",
+      "label": "🔷 △ Keystone 3",
+      "x": 1169,
+      "y": -753,
+      "kind": "fixed",
+      "extras": {
+        "description": "5-sided polygon node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "polygon",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r3_c11_n4",
+      "label": "🔷 ☆ Keystone 4",
+      "x": 1270,
+      "y": -786,
+      "kind": "fixed",
+      "extras": {
+        "description": "5-sided polygon node",
+        "cost": 0,
+        "damage": 0,
+        "shape": "circle",
+        "isKeystone": true
+      }
+    },
+    {
+      "id": "r4_c0_n0",
+      "label": "⚡ ╋ Ascend 0",
+      "x": 1829,
+      "y": 466,
+      "kind": "ultimate",
+      "extras": {
+        "description": "Cross pattern node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "cross",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c0_n1",
+      "label": "⚡ ┼ Ascend 1",
+      "x": 1769,
+      "y": 526,
+      "kind": "ultimate",
+      "extras": {
+        "description": "Cross pattern node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "cross",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c0_n2",
+      "label": "⚡ ╂ Ascend 2",
+      "x": 1859,
+      "y": 466,
+      "kind": "ultimate",
+      "extras": {
+        "description": "Cross pattern node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "cross",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c0_n3",
+      "label": "⚡ ┿ Ascend 3",
+      "x": 1769,
+      "y": 556,
+      "kind": "ultimate",
+      "extras": {
+        "description": "Cross pattern node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "cross",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c0_n4",
+      "label": "⚡ ╬ Ascend 4",
+      "x": 1889,
+      "y": 466,
+      "kind": "ultimate",
+      "extras": {
+        "description": "Cross pattern node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "cross",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c0_n5",
+      "label": "⚡ ╋ Ascend 5",
+      "x": 1769,
+      "y": 586,
+      "kind": "ultimate",
+      "extras": {
+        "description": "Cross pattern node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "cross",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c1_n0",
+      "label": "⚡ ◉ Ascend 0",
+      "x": 1343,
+      "y": 1273,
+      "kind": "ultimate",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "ring",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c1_n1",
+      "label": "⚡ ◉ Ascend 1",
+      "x": 1283,
+      "y": 1308,
+      "kind": "ultimate",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "ring",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c1_n2",
+      "label": "⚡ ◉ Ascend 2",
+      "x": 1283,
+      "y": 1238,
+      "kind": "ultimate",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "ring",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c1_n3",
+      "label": "⚡ ◍ Ascend 3",
+      "x": 1383,
+      "y": 1273,
+      "kind": "ultimate",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "ring",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c1_n4",
+      "label": "⚡ ◍ Ascend 4",
+      "x": 1343,
+      "y": 1342,
+      "kind": "ultimate",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "ring",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c1_n5",
+      "label": "⚡ ◍ Ascend 5",
+      "x": 1263,
+      "y": 1342,
+      "kind": "ultimate",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "ring",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c1_n6",
+      "label": "⚡ ◍ Ascend 6",
+      "x": 1223,
+      "y": 1273,
+      "kind": "ultimate",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "ring",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c1_n7",
+      "label": "⚡ ◍ Ascend 7",
+      "x": 1263,
+      "y": 1204,
+      "kind": "ultimate",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "ring",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c1_n8",
+      "label": "⚡ ◍ Ascend 8",
+      "x": 1343,
+      "y": 1204,
+      "kind": "ultimate",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "ring",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c2_n0",
+      "label": "⚡ ○ Ascend 0",
+      "x": 581,
+      "y": 1739,
+      "kind": "ultimate",
+      "extras": {
+        "description": "6-sided polygon node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "circle",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c2_n1",
+      "label": "⚡ □ Ascend 1",
+      "x": 539,
+      "y": 1813,
+      "kind": "ultimate",
+      "extras": {
+        "description": "6-sided polygon node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "polygon",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c2_n2",
+      "label": "⚡ ◇ Ascend 2",
+      "x": 454,
+      "y": 1813,
+      "kind": "ultimate",
+      "extras": {
+        "description": "6-sided polygon node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "circle",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c2_n3",
+      "label": "⚡ △ Ascend 3",
+      "x": 411,
+      "y": 1739,
+      "kind": "ultimate",
+      "extras": {
+        "description": "6-sided polygon node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "polygon",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c2_n4",
+      "label": "⚡ ☆ Ascend 4",
+      "x": 453,
+      "y": 1665,
+      "kind": "ultimate",
+      "extras": {
+        "description": "6-sided polygon node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "circle",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c2_n5",
+      "label": "⚡ ☾ Ascend 5",
+      "x": 539,
+      "y": 1665,
+      "kind": "ultimate",
+      "extras": {
+        "description": "6-sided polygon node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "polygon",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c3_n0",
+      "label": "⚡ ● Ascend 0",
+      "x": -356,
+      "y": 1739,
+      "kind": "ultimate",
+      "extras": {
+        "description": "circle node in Ascend cluster",
+        "cost": 20,
+        "damage": 0,
+        "shape": "circle",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c3_n1",
+      "label": "⚡ ■ Ascend 1",
+      "x": -396,
+      "y": 1808,
+      "kind": "ultimate",
+      "extras": {
+        "description": "square node in Ascend cluster",
+        "cost": 20,
+        "damage": 0,
+        "shape": "square",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c3_n2",
+      "label": "⚡ ◆ Ascend 2",
+      "x": -476,
+      "y": 1808,
+      "kind": "ultimate",
+      "extras": {
+        "description": "diamond node in Ascend cluster",
+        "cost": 20,
+        "damage": 0,
+        "shape": "diamond",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c3_n3",
+      "label": "⚡ ▲ Ascend 3",
+      "x": -516,
+      "y": 1739,
+      "kind": "ultimate",
+      "extras": {
+        "description": "triangle node in Ascend cluster",
+        "cost": 20,
+        "damage": 0,
+        "shape": "triangle",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c3_n4",
+      "label": "⚡ ● Ascend 4",
+      "x": -476,
+      "y": 1670,
+      "kind": "ultimate",
+      "extras": {
+        "description": "circle node in Ascend cluster",
+        "cost": 20,
+        "damage": 0,
+        "shape": "circle",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c3_n5",
+      "label": "⚡ ■ Ascend 5",
+      "x": -396,
+      "y": 1670,
+      "kind": "ultimate",
+      "extras": {
+        "description": "square node in Ascend cluster",
+        "cost": 20,
+        "damage": 0,
+        "shape": "square",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c4_n0",
+      "label": "⚡ ○ Ascend 0",
+      "x": -1153,
+      "y": 1273,
+      "kind": "ultimate",
+      "extras": {
+        "description": "5-sided polygon node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "circle",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c4_n1",
+      "label": "⚡ □ Ascend 1",
+      "x": -1215,
+      "y": 1359,
+      "kind": "ultimate",
+      "extras": {
+        "description": "5-sided polygon node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "polygon",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c4_n2",
+      "label": "⚡ ◇ Ascend 2",
+      "x": -1316,
+      "y": 1326,
+      "kind": "ultimate",
+      "extras": {
+        "description": "5-sided polygon node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "circle",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c4_n3",
+      "label": "⚡ △ Ascend 3",
+      "x": -1316,
+      "y": 1220,
+      "kind": "ultimate",
+      "extras": {
+        "description": "5-sided polygon node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "polygon",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c4_n4",
+      "label": "⚡ ☆ Ascend 4",
+      "x": -1215,
+      "y": 1187,
+      "kind": "ultimate",
+      "extras": {
+        "description": "5-sided polygon node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "circle",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c5_n0",
+      "label": "⚡ ✧ Ascend 0",
+      "x": -1669,
+      "y": 466,
+      "kind": "ultimate",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "star",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c5_n1",
+      "label": "⚡ ✦ Ascend 1",
+      "x": -1723,
+      "y": 529,
+      "kind": "ultimate",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "star",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c5_n2",
+      "label": "⚡ ✪ Ascend 2",
+      "x": -1790,
+      "y": 427,
+      "kind": "ultimate",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "star",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c5_n3",
+      "label": "⚡ ✰ Ascend 3",
+      "x": -1637,
+      "y": 376,
+      "kind": "ultimate",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "star",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c5_n4",
+      "label": "⚡ ⋆ Ascend 4",
+      "x": -1622,
+      "y": 575,
+      "kind": "ultimate",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "star",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c5_n5",
+      "label": "⚡ ∘ Ascend 5",
+      "x": -1858,
+      "y": 538,
+      "kind": "ultimate",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "star",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c5_n6",
+      "label": "⚡ ∙ Ascend 6",
+      "x": -1751,
+      "y": 281,
+      "kind": "ultimate",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "star",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c6_n0",
+      "label": "⚡ ╋ Ascend 0",
+      "x": -1649,
+      "y": -466,
+      "kind": "ultimate",
+      "extras": {
+        "description": "Cross pattern node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "cross",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c6_n1",
+      "label": "⚡ ┼ Ascend 1",
+      "x": -1709,
+      "y": -406,
+      "kind": "ultimate",
+      "extras": {
+        "description": "Cross pattern node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "cross",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c6_n2",
+      "label": "⚡ ╂ Ascend 2",
+      "x": -1619,
+      "y": -466,
+      "kind": "ultimate",
+      "extras": {
+        "description": "Cross pattern node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "cross",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c6_n3",
+      "label": "⚡ ┿ Ascend 3",
+      "x": -1709,
+      "y": -376,
+      "kind": "ultimate",
+      "extras": {
+        "description": "Cross pattern node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "cross",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c6_n4",
+      "label": "⚡ ╬ Ascend 4",
+      "x": -1589,
+      "y": -466,
+      "kind": "ultimate",
+      "extras": {
+        "description": "Cross pattern node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "cross",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c6_n5",
+      "label": "⚡ ╋ Ascend 5",
+      "x": -1709,
+      "y": -346,
+      "kind": "ultimate",
+      "extras": {
+        "description": "Cross pattern node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "cross",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c7_n0",
+      "label": "⚡ ◉ Ascend 0",
+      "x": -1203,
+      "y": -1273,
+      "kind": "ultimate",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "ring",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c7_n1",
+      "label": "⚡ ◉ Ascend 1",
+      "x": -1263,
+      "y": -1238,
+      "kind": "ultimate",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "ring",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c7_n2",
+      "label": "⚡ ◉ Ascend 2",
+      "x": -1263,
+      "y": -1308,
+      "kind": "ultimate",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "ring",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c7_n3",
+      "label": "⚡ ◍ Ascend 3",
+      "x": -1163,
+      "y": -1273,
+      "kind": "ultimate",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "ring",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c7_n4",
+      "label": "⚡ ◍ Ascend 4",
+      "x": -1203,
+      "y": -1204,
+      "kind": "ultimate",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "ring",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c7_n5",
+      "label": "⚡ ◍ Ascend 5",
+      "x": -1283,
+      "y": -1204,
+      "kind": "ultimate",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "ring",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c7_n6",
+      "label": "⚡ ◍ Ascend 6",
+      "x": -1323,
+      "y": -1273,
+      "kind": "ultimate",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "ring",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c7_n7",
+      "label": "⚡ ◍ Ascend 7",
+      "x": -1283,
+      "y": -1342,
+      "kind": "ultimate",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "ring",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c7_n8",
+      "label": "⚡ ◍ Ascend 8",
+      "x": -1203,
+      "y": -1342,
+      "kind": "ultimate",
+      "extras": {
+        "description": "Radial pattern node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "ring",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c8_n0",
+      "label": "⚡ ○ Ascend 0",
+      "x": -351,
+      "y": -1739,
+      "kind": "ultimate",
+      "extras": {
+        "description": "6-sided polygon node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "circle",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c8_n1",
+      "label": "⚡ □ Ascend 1",
+      "x": -393,
+      "y": -1665,
+      "kind": "ultimate",
+      "extras": {
+        "description": "6-sided polygon node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "polygon",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c8_n2",
+      "label": "⚡ ◇ Ascend 2",
+      "x": -478,
+      "y": -1665,
+      "kind": "ultimate",
+      "extras": {
+        "description": "6-sided polygon node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "circle",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c8_n3",
+      "label": "⚡ △ Ascend 3",
+      "x": -521,
+      "y": -1739,
+      "kind": "ultimate",
+      "extras": {
+        "description": "6-sided polygon node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "polygon",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c8_n4",
+      "label": "⚡ ☆ Ascend 4",
+      "x": -479,
+      "y": -1813,
+      "kind": "ultimate",
+      "extras": {
+        "description": "6-sided polygon node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "circle",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c8_n5",
+      "label": "⚡ ☾ Ascend 5",
+      "x": -393,
+      "y": -1813,
+      "kind": "ultimate",
+      "extras": {
+        "description": "6-sided polygon node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "polygon",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c9_n0",
+      "label": "⚡ ● Ascend 0",
+      "x": 576,
+      "y": -1739,
+      "kind": "ultimate",
+      "extras": {
+        "description": "circle node in Ascend cluster",
+        "cost": 20,
+        "damage": 0,
+        "shape": "circle",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c9_n1",
+      "label": "⚡ ■ Ascend 1",
+      "x": 536,
+      "y": -1670,
+      "kind": "ultimate",
+      "extras": {
+        "description": "square node in Ascend cluster",
+        "cost": 20,
+        "damage": 0,
+        "shape": "square",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c9_n2",
+      "label": "⚡ ◆ Ascend 2",
+      "x": 456,
+      "y": -1670,
+      "kind": "ultimate",
+      "extras": {
+        "description": "diamond node in Ascend cluster",
+        "cost": 20,
+        "damage": 0,
+        "shape": "diamond",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c9_n3",
+      "label": "⚡ ▲ Ascend 3",
+      "x": 416,
+      "y": -1739,
+      "kind": "ultimate",
+      "extras": {
+        "description": "triangle node in Ascend cluster",
+        "cost": 20,
+        "damage": 0,
+        "shape": "triangle",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c9_n4",
+      "label": "⚡ ● Ascend 4",
+      "x": 456,
+      "y": -1808,
+      "kind": "ultimate",
+      "extras": {
+        "description": "circle node in Ascend cluster",
+        "cost": 20,
+        "damage": 0,
+        "shape": "circle",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c9_n5",
+      "label": "⚡ ■ Ascend 5",
+      "x": 536,
+      "y": -1808,
+      "kind": "ultimate",
+      "extras": {
+        "description": "square node in Ascend cluster",
+        "cost": 20,
+        "damage": 0,
+        "shape": "square",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c10_n0",
+      "label": "⚡ ○ Ascend 0",
+      "x": 1393,
+      "y": -1273,
+      "kind": "ultimate",
+      "extras": {
+        "description": "5-sided polygon node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "circle",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c10_n1",
+      "label": "⚡ □ Ascend 1",
+      "x": 1331,
+      "y": -1187,
+      "kind": "ultimate",
+      "extras": {
+        "description": "5-sided polygon node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "polygon",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c10_n2",
+      "label": "⚡ ◇ Ascend 2",
+      "x": 1230,
+      "y": -1220,
+      "kind": "ultimate",
+      "extras": {
+        "description": "5-sided polygon node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "circle",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c10_n3",
+      "label": "⚡ △ Ascend 3",
+      "x": 1230,
+      "y": -1326,
+      "kind": "ultimate",
+      "extras": {
+        "description": "5-sided polygon node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "polygon",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c10_n4",
+      "label": "⚡ ☆ Ascend 4",
+      "x": 1331,
+      "y": -1359,
+      "kind": "ultimate",
+      "extras": {
+        "description": "5-sided polygon node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "circle",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c11_n0",
+      "label": "⚡ ✧ Ascend 0",
+      "x": 1809,
+      "y": -466,
+      "kind": "ultimate",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "star",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c11_n1",
+      "label": "⚡ ✦ Ascend 1",
+      "x": 1755,
+      "y": -403,
+      "kind": "ultimate",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "star",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c11_n2",
+      "label": "⚡ ✪ Ascend 2",
+      "x": 1688,
+      "y": -505,
+      "kind": "ultimate",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "star",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c11_n3",
+      "label": "⚡ ✰ Ascend 3",
+      "x": 1841,
+      "y": -556,
+      "kind": "ultimate",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "star",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c11_n4",
+      "label": "⚡ ⋆ Ascend 4",
+      "x": 1856,
+      "y": -357,
+      "kind": "ultimate",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "star",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c11_n5",
+      "label": "⚡ ∘ Ascend 5",
+      "x": 1620,
+      "y": -394,
+      "kind": "ultimate",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "star",
+        "isUltimate": true
+      }
+    },
+    {
+      "id": "r4_c11_n6",
+      "label": "⚡ ∙ Ascend 6",
+      "x": 1727,
+      "y": -651,
+      "kind": "ultimate",
+      "extras": {
+        "description": "Spiral pattern node",
+        "cost": 20,
+        "damage": 0,
+        "shape": "star",
+        "isUltimate": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Skill Tree JSON Documentation</title>
+  <style>
+    :root {
+      --bg-page: #f3f4f6;
+      --bg-doc: #ffffff;
+      --border-doc: #e5e7eb;
+      --shadow-doc: 0 18px 40px rgba(15, 23, 42, 0.05);
+      --text-main: #111827;
+      --text-muted: #6b7280;
+      --accent: #2563eb;
+      --accent-soft: #eff6ff;
+      --font-ui: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --font-mono: "JetBrains Mono", "Fira Code", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      color: var(--text-main);
+      font-family: var(--font-ui);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .doc-shell {
+      max-width: 100%;
+      padding: 0 10%;
+    }
+
+    .doc {
+      background: var(--bg-doc);
+      border-radius: 12px;
+      padding: 32px 32px 40px;
+    }
+
+    .doc-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .doc-title {
+      margin: 0 0 4px;
+      font-size: 26px;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+    }
+
+    .doc-lead {
+      margin: 4px 0 0;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .lang-toggle {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      border: 1px solid #d1d5db;
+      background: #f9fafb;
+      overflow: hidden;
+      font-size: 12px;
+      white-space: nowrap;
+      margin-left: auto;
+    }
+
+    .lang-btn {
+      border: none;
+      background: none;
+      padding: 4px 12px;
+      cursor: pointer;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .lang-btn.active {
+      background: var(--accent);
+      color: #ffffff;
+    }
+
+    h1, h2, h3, h4 {
+      font-weight: 600;
+      letter-spacing: 0.01em;
+    }
+
+    h2 {
+      margin: 24px 0 6px;
+      font-size: 20px;
+    }
+
+    h3 {
+      margin: 18px 0 4px;
+      font-size: 16px;
+    }
+
+    p {
+      margin: 6px 0;
+      font-size: 14px;
+    }
+
+    ul, ol {
+      margin: 6px 0 10px;
+      padding-left: 20px;
+      font-size: 14px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 1px 8px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 11px;
+      margin-left: 6px;
+    }
+
+    .muted {
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    hr.soft {
+      border: none;
+      border-top: 1px solid #e5e7eb;
+      margin: 18px 0;
+    }
+
+    code {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      padding: 1px 4px;
+      border-radius: 3px;
+      background: #f3f4f6;
+    }
+
+    pre {
+      margin: 10px 0 14px;
+      padding: 12px 14px;
+      border-radius: 8px;
+      background: #0f172a;
+      color: #e5e7eb;
+      overflow-x: auto;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    pre code {
+      padding: 0;
+      background: none;
+      border-radius: 0;
+      color: inherit;
+      display: block;
+    }
+
+    .tok-key { color: #fbbf24; }       /* amber-400 */
+    .tok-string { color: #4ade80; }    /* green-400 */
+    .tok-number { color: #38bdf8; }    /* sky-400 */
+    .tok-boolean { color: #f97316; }   /* orange-500 */
+    .tok-null { color: #e5e7eb; }
+    .tok-punc { color: #9ca3af; }
+
+    .callout {
+      border-left: 3px solid var(--accent);
+      padding: 10px 12px;
+      margin: 12px 0;
+      background: #f9fafb;
+      border-radius: 4px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .lang-block {
+      display: none;
+    }
+
+    .lang-block.active {
+      display: block;
+    }
+
+    @media (max-width: 720px) {
+      .doc {
+        padding: 24px 18px 28px;
+      }
+
+      .doc-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .lang-toggle {
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="doc-shell">
+    <article class="doc">
+      <header class="doc-header">
+        <div>
+          <h1 class="doc-title">Skill Tree JSON Documentation</h1>
+          <p class="doc-lead">
+            Minimal reference for how to structure skill tree data as JSON for the editor, the game runtime,
+            and external documentation.
+          </p>
+        </div>
+        <div class="lang-toggle" aria-label="Language toggle">
+          <button class="lang-btn active" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="th">TH</button>
+        </div>
+      </header>
+
+      <!-- English -->
+      <div class="lang-block active" data-block="en">
+        <section>
+          <h2>1. Overview<span class="badge">Editor format</span></h2>
+          <p>
+            The Skill Tree Editor exports JSON so that you can treat your entire tree as data.
+            This document focuses on a practical schema that works well for:
+          </p>
+          <ul>
+            <li>Visual editing in the browser</li>
+            <li>Game runtime loading and unlock logic</li>
+            <li>Documentation generation (wiki pages, PDFs, etc.)</li>
+          </ul>
+          <hr class="soft">
+        </section>
+
+        <section>
+          <h2>2. Core concepts</h2>
+          <p>These concepts should be shared between the editor and your game code:</p>
+          <ul>
+            <li><strong>Node</strong> – a single skill or passive modifier that can be unlocked.</li>
+            <li><strong>Link</strong> – a connection between two nodes that defines unlock paths.</li>
+            <li><strong>Stats</strong> – attributes changed by the node (for example <code>str</code>, <code>vit</code>, <code>int</code>, <code>dex</code>, <code>luk</code>).</li>
+            <li><strong>Role</strong> – design categories such as <code>root</code>, <code>core</code>, <code>keystone</code>.</li>
+          </ul>
+          <div class="callout">
+            Keep each tree in a single JSON file and commit it to your repository.
+            The editor can export to this file and the game can read from it without conversion.
+          </div>
+        </section>
+
+        <section>
+          <h2>3. Recommended JSON schema</h2>
+          <p>
+            The following structure balances editor needs (layout, connections) with game needs (costs, stats, tags).
+            You can rename fields but try to keep the same ideas.
+          </p>
+
+          <pre><code>{
+  <span class="tok-key">"version"</span><span class="tok-punc">:</span> <span class="tok-string">"1.0.0"</span><span class="tok-punc">,</span>
+  <span class="tok-key">"meta"</span><span class="tok-punc">:</span> {
+    <span class="tok-key">"name"</span><span class="tok-punc">:</span> <span class="tok-string">"Sacred Geometry Skill Tree"</span><span class="tok-punc">,</span>
+    <span class="tok-key">"description"</span><span class="tok-punc">:</span> <span class="tok-string">"Example configuration for the Skill Tree Editor"</span><span class="tok-punc">,</span>
+    <span class="tok-key">"createdAt"</span><span class="tok-punc">:</span> <span class="tok-string">"2025-11-28T00:00:00Z"</span><span class="tok-punc">,</span>
+    <span class="tok-key">"author"</span><span class="tok-punc">:</span> <span class="tok-string">"Your Name"</span>
+  <span class="tok-punc">},</span>
+  <span class="tok-key">"statsSchema"</span><span class="tok-punc">:</span> [<span class="tok-string">"str"</span><span class="tok-punc">,</span> <span class="tok-string">"vit"</span><span class="tok-punc">,</span> <span class="tok-string">"int"</span><span class="tok-punc">,</span> <span class="tok-string">"dex"</span><span class="tok-punc">,</span> <span class="tok-string">"luk"</span>]<span class="tok-punc">,</span>
+  <span class="tok-key">"nodes"</span><span class="tok-punc">:</span> [
+    {
+      <span class="tok-key">"id"</span><span class="tok-punc">:</span> <span class="tok-string">"n-001"</span><span class="tok-punc">,</span>
+      <span class="tok-key">"label"</span><span class="tok-punc">:</span> <span class="tok-string">"Power Strike"</span><span class="tok-punc">,</span>
+      <span class="tok-key">"type"</span><span class="tok-punc">:</span> <span class="tok-string">"active"</span><span class="tok-punc">,</span>
+      <span class="tok-key">"role"</span><span class="tok-punc">:</span> <span class="tok-string">"core"</span><span class="tok-punc">,</span>
+      <span class="tok-key">"position"</span><span class="tok-punc">:</span> { <span class="tok-key">"x"</span><span class="tok-punc">:</span> <span class="tok-number">0</span><span class="tok-punc">,</span> <span class="tok-key">"y"</span><span class="tok-punc">:</span> <span class="tok-number">0</span> }<span class="tok-punc">,</span>
+      <span class="tok-key">"radius"</span><span class="tok-punc">:</span> <span class="tok-number">24</span><span class="tok-punc">,</span>
+      <span class="tok-key">"parents"</span><span class="tok-punc">:</span> []<span class="tok-punc">,</span>
+      <span class="tok-key">"children"</span><span class="tok-punc">:</span> [<span class="tok-string">"n-002"</span>]<span class="tok-punc">,</span>
+      <span class="tok-key">"cost"</span><span class="tok-punc">:</span> {
+        <span class="tok-key">"points"</span><span class="tok-punc">:</span> <span class="tok-number">1</span><span class="tok-punc">,</span>
+        <span class="tok-key">"requiredNodes"</span><span class="tok-punc">:</span> []
+      }<span class="tok-punc">,</span>
+      <span class="tok-key">"stats"</span><span class="tok-punc">:</span> {
+        <span class="tok-key">"str"</span><span class="tok-punc">:</span> <span class="tok-number">10</span><span class="tok-punc">,</span>
+        <span class="tok-key">"vit"</span><span class="tok-punc">:</span> <span class="tok-number">0</span><span class="tok-punc">,</span>
+        <span class="tok-key">"int"</span><span class="tok-punc">:</span> <span class="tok-number">0</span><span class="tok-punc">,</span>
+        <span class="tok-key">"dex"</span><span class="tok-punc">:</span> <span class="tok-number">5</span><span class="tok-punc">,</span>
+        <span class="tok-key">"luk"</span><span class="tok-punc">:</span> <span class="tok-number">0</span>
+      }<span class="tok-punc">,</span>
+      <span class="tok-key">"tags"</span><span class="tok-punc">:</span> [<span class="tok-string">"warrior"</span><span class="tok-punc">,</span> <span class="tok-string">"melee"</span>]<span class="tok-punc">,</span>
+      <span class="tok-key">"extra"</span><span class="tok-punc">:</span> {
+        <span class="tok-key">"summary"</span><span class="tok-punc">:</span> <span class="tok-string">"Increase physical damage."</span><span class="tok-punc">,</span>
+        <span class="tok-key">"description"</span><span class="tok-punc">:</span> <span class="tok-string">"Increase physical damage by 15% for melee attacks."</span><span class="tok-punc">,</span>
+        <span class="tok-key">"icon"</span><span class="tok-punc">:</span> <span class="tok-string">"icons/power-strike.png"</span>
+      }
+    }
+  ]<span class="tok-punc">,</span>
+  <span class="tok-key">"links"</span><span class="tok-punc">:</span> [
+    {
+      <span class="tok-key">"id"</span><span class="tok-punc">:</span> <span class="tok-string">"e-001"</span><span class="tok-punc">,</span>
+      <span class="tok-key">"from"</span><span class="tok-punc">:</span> <span class="tok-string">"n-001"</span><span class="tok-punc">,</span>
+      <span class="tok-key">"to"</span><span class="tok-punc">:</span> <span class="tok-string">"n-002"</span><span class="tok-punc">,</span>
+      <span class="tok-key">"kind"</span><span class="tok-punc">:</span> <span class="tok-string">"normal"</span>
+    }
+  ]
+}</code></pre>
+
+          <h3>Field notes</h3>
+          <ul>
+            <li><code>statsSchema</code> defines which stats exist and how to interpret the <code>stats</code> object.</li>
+            <li><code>position</code> is mainly for the visual layout inside the editor.</li>
+            <li><code>cost.points</code> is interpreted by your game logic when validating unlocks.</li>
+            <li><code>extra</code> is free-form for descriptions, icons, and UI-only fields.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>4. Documentation JSON</h2>
+          <p>
+            A second JSON file can be dedicated to human-readable documentation.
+            It references the same node ids but groups them into paths or classes.
+          </p>
+
+          <pre><code>{
+  <span class="tok-key">"treeName"</span><span class="tok-punc">:</span> <span class="tok-string">"Universal Skill Tree"</span><span class="tok-punc">,</span>
+  <span class="tok-key">"paths"</span><span class="tok-punc">:</span> [
+    {
+      <span class="tok-key">"id"</span><span class="tok-punc">:</span> <span class="tok-string">"path-strength"</span><span class="tok-punc">,</span>
+      <span class="tok-key">"name"</span><span class="tok-punc">:</span> <span class="tok-string">"Path of Strength"</span><span class="tok-punc">,</span>
+      <span class="tok-key">"summary"</span><span class="tok-punc">:</span> <span class="tok-string">"Melee and physical damage oriented skills."</span><span class="tok-punc">,</span>
+      <span class="tok-key">"nodes"</span><span class="tok-punc">:</span> [<span class="tok-string">"n-001"</span><span class="tok-punc">,</span> <span class="tok-string">"n-002"</span><span class="tok-punc">,</span> <span class="tok-string">"n-010"</span>]
+    }
+  ]<span class="tok-punc">,</span>
+  <span class="tok-key">"nodeDetails"</span><span class="tok-punc">:</span> {
+    <span class="tok-key">"n-001"</span><span class="tok-punc">:</span> {
+      <span class="tok-key">"name"</span><span class="tok-punc">:</span> <span class="tok-string">"Power Strike"</span><span class="tok-punc">,</span>
+      <span class="tok-key">"type"</span><span class="tok-punc">:</span> <span class="tok-string">"active"</span><span class="tok-punc">,</span>
+      <span class="tok-key">"tier"</span><span class="tok-punc">:</span> <span class="tok-number">1</span><span class="tok-punc">,</span>
+      <span class="tok-key">"summary"</span><span class="tok-punc">:</span> <span class="tok-string">"Increase physical damage."</span><span class="tok-punc">,</span>
+      <span class="tok-key">"description"</span><span class="tok-punc">:</span> <span class="tok-string">"Increase physical damage by 15% for melee attacks."</span><span class="tok-punc">,</span>
+      <span class="tok-key">"requirements"</span><span class="tok-punc">:</span> [<span class="tok-string">"None"</span>]<span class="tok-punc">,</span>
+      <span class="tok-key">"effects"</span><span class="tok-punc">:</span> [<span class="tok-string">"+10 STR"</span><span class="tok-punc">,</span> <span class="tok-string">"+5 DEX"</span>]<span class="tok-punc">,</span>
+      <span class="tok-key">"tags"</span><span class="tok-punc">:</span> [<span class="tok-string">"melee"</span><span class="tok-punc">,</span> <span class="tok-string">"starter"</span>]
+    }
+  }
+}</code></pre>
+        </section>
+
+        <section>
+          <h2>5. HTML JSON</h2>
+          <p>
+            For static sites, you can store pre-rendered HTML inside JSON and inject it into the page.
+            This is useful if you generate docs from a build script.
+          </p>
+
+          <pre><code>{
+  <span class="tok-key">"sections"</span><span class="tok-punc">:</span> [
+    {
+      <span class="tok-key">"id"</span><span class="tok-punc">:</span> <span class="tok-string">"sec-strength"</span><span class="tok-punc">,</span>
+      <span class="tok-key">"title"</span><span class="tok-punc">:</span> <span class="tok-string">"Path of Strength"</span><span class="tok-punc">,</span>
+      <span class="tok-key">"html"</span><span class="tok-punc">:</span> <span class="tok-string">&lt;h2&gt;Path of Strength&lt;/h2&gt;&lt;p&gt;Melee-focused skills...&lt;/p&gt;</span>
+    }
+  ]
+}</code></pre>
+        </section>
+
+        <section>
+          <h2>6. Typical workflow</h2>
+          <ol>
+            <li>Design the tree in the visual editor and export the JSON.</li>
+            <li>Commit the JSON to your repository.</li>
+            <li>Load the JSON in your game at startup and build your skill graph and UI.</li>
+            <li>Optionally, derive documentation JSON or HTML JSON using build scripts.</li>
+          </ol>
+        </section>
+      </div>
+
+      <!-- Thai -->
+      <div class="lang-block" data-block="th">
+        <section>
+          <h2>1. ภาพรวม<span class="badge">รูปแบบสำหรับ editor</span></h2>
+          <p>
+            Skill Tree Editor สามารถ export ข้อมูลเป็น JSON เพื่อให้ทั้งต้นไม้กลายเป็น data
+            ส่วนนี้อธิบายโครงสร้างที่ใช้งานได้จริง เหมาะกับ:
+          </p>
+          <ul>
+            <li>ใช้แก้ไขแบบ Visual ในเบราว์เซอร์</li>
+            <li>โหลดในเกมจริงเพื่อใช้ตรวจสอบการปลดล็อก</li>
+            <li>สร้างเอกสารประกอบ เช่น Wiki หรือ PDF</li>
+          </ul>
+          <hr class="soft">
+        </section>
+
+        <section>
+          <h2>2. แนวคิดหลัก</h2>
+          <p>ตัว editor และเกมควรเข้าใจแนวคิดร่วมกันอย่างน้อยดังนี้:</p>
+          <ul>
+            <li><strong>Node</strong> – สกิลหรือ passive หนึ่งช่องที่สามารถปลดล็อกได้</li>
+            <li><strong>Link</strong> – เส้นเชื่อมระหว่าง node ที่กำหนดเส้นทางการปลดล็อก</li>
+            <li><strong>Stats</strong> – ค่าสเตตัสที่ถูกปรับ เช่น <code>str</code>, <code>vit</code>, <code>int</code>, <code>dex</code>, <code>luk</code></li>
+            <li><strong>Role</strong> – บทบาทของ node เช่น <code>root</code>, <code>core</code>, <code>keystone</code></li>
+          </ul>
+          <div class="callout">
+            แนะนำให้ใช้หนึ่งไฟล์ JSON ต่อหนึ่งต้นไม้ แล้ว commit ไว้ใน repository
+            editor สามารถ export ไปยังไฟล์นี้ และเกมก็อ่านใช้ได้เลยโดยไม่ต้องแปลง
+          </div>
+        </section>
+
+        <section>
+          <h2>3. โครงสร้าง JSON ที่แนะนำ</h2>
+          <p>
+            โครงสร้างด้านล่างพยายามให้ตอบโจทย์ทั้งด้าน layout ใน editor และ logic ในเกม
+            สามารถเปลี่ยนชื่อ field ได้ แต่ควรรักษาแนวคิดเดิมไว้
+          </p>
+
+          <pre><code>{
+  <span class="tok-key">"version"</span><span class="tok-punc">:</span> <span class="tok-string">"1.0.0"</span><span class="tok-punc">,</span>
+  <span class="tok-key">"meta"</span><span class="tok-punc">:</span> {
+    <span class="tok-key">"name"</span><span class="tok-punc">:</span> <span class="tok-string">"Sacred Geometry Skill Tree"</span><span class="tok-punc">,</span>
+    <span class="tok-key">"description"</span><span class="tok-punc">:</span> <span class="tok-string">"ตัวอย่างสกิลทรีสำหรับ Skill Tree Editor"</span><span class="tok-punc">,</span>
+    <span class="tok-key">"createdAt"</span><span class="tok-punc">:</span> <span class="tok-string">"2025-11-28T00:00:00Z"</span><span class="tok-punc">,</span>
+    <span class="tok-key">"author"</span><span class="tok-punc">:</span> <span class="tok-string">"Your Name"</span>
+  <span class="tok-punc">},</span>
+  <span class="tok-key">"statsSchema"</span><span class="tok-punc">:</span> [<span class="tok-string">"str"</span><span class="tok-punc">,</span> <span class="tok-string">"vit"</span><span class="tok-punc">,</span> <span class="tok-string">"int"</span><span class="tok-punc">,</span> <span class="tok-string">"dex"</span><span class="tok-punc">,</span> <span class="tok-string">"luk"</span>]<span class="tok-punc">,</span>
+  <span class="tok-key">"nodes"</span><span class="tok-punc">:</span> [
+    {
+      <span class="tok-key">"id"</span><span class="tok-punc">:</span> <span class="tok-string">"n-001"</span><span class="tok-punc">,</span>
+      <span class="tok-key">"label"</span><span class="tok-punc">:</span> <span class="tok-string">"Power Strike"</span><span class="tok-punc">,</span>
+      <span class="tok-key">"type"</span><span class="tok-punc">:</span> <span class="tok-string">"active"</span><span class="tok-punc">,</span>
+      <span class="tok-key">"role"</span><span class="tok-punc">:</span> <span class="tok-string">"core"</span><span class="tok-punc">,</span>
+      <span class="tok-key">"position"</span><span class="tok-punc">:</span> { <span class="tok-key">"x"</span><span class="tok-punc">:</span> <span class="tok-number">0</span><span class="tok-punc">,</span> <span class="tok-key">"y"</span><span class="tok-punc">:</span> <span class="tok-number">0</span> }<span class="tok-punc">,</span>
+      <span class="tok-key">"radius"</span><span class="tok-punc">:</span> <span class="tok-number">24</span><span class="tok-punc">,</span>
+      <span class="tok-key">"parents"</span><span class="tok-punc">:</span> []<span class="tok-punc">,</span>
+      <span class="tok-key">"children"</span><span class="tok-punc">:</span> [<span class="tok-string">"n-002"</span>]<span class="tok-punc">,</span>
+      <span class="tok-key">"cost"</span><span class="tok-punc">:</span> {
+        <span class="tok-key">"points"</span><span class="tok-punc">:</span> <span class="tok-number">1</span><span class="tok-punc">,</span>
+        <span class="tok-key">"requiredNodes"</span><span class="tok-punc">:</span> []
+      }<span class="tok-punc">,</span>
+      <span class="tok-key">"stats"</span><span class="tok-punc">:</span> {
+        <span class="tok-key">"str"</span><span class="tok-punc">:</span> <span class="tok-number">10</span><span class="tok-punc">,</span>
+        <span class="tok-key">"vit"</span><span class="tok-punc">:</span> <span class="tok-number">0</span><span class="tok-punc">,</span>
+        <span class="tok-key">"int"</span><span class="tok-punc">:</span> <span class="tok-number">0</span><span class="tok-punc">,</span>
+        <span class="tok-key">"dex"</span><span class="tok-punc">:</span> <span class="tok-number">5</span><span class="tok-punc">,</span>
+        <span class="tok-key">"luk"</span><span class="tok-punc">:</span> <span class="tok-number">0</span>
+      }<span class="tok-punc">,</span>
+      <span class="tok-key">"tags"</span><span class="tok-punc">:</span> [<span class="tok-string">"warrior"</span><span class="tok-punc">,</span> <span class="tok-string">"melee"</span>]<span class="tok-punc">,</span>
+      <span class="tok-key">"extra"</span><span class="tok-punc">:</span> {
+        <span class="tok-key">"summary"</span><span class="tok-punc">:</span> <span class="tok-string">"เพิ่มความเสียหายกายภาพ"</span><span class="tok-punc">,</span>
+        <span class="tok-key">"description"</span><span class="tok-punc">:</span> <span class="tok-string">"เพิ่มความเสียหายกายภาพ 15% สำหรับการโจมตีระยะใกล้"</span><span class="tok-punc">,</span>
+        <span class="tok-key">"icon"</span><span class="tok-punc">:</span> <span class="tok-string">"icons/power-strike.png"</span>
+      }
+    }
+  ]<span class="tok-punc">,</span>
+  <span class="tok-key">"links"</span><span class="tok-punc">:</span> [
+    {
+      <span class="tok-key">"id"</span><span class="tok-punc">:</span> <span class="tok-string">"e-001"</span><span class="tok-punc">,</span>
+      <span class="tok-key">"from"</span><span class="tok-punc">:</span> <span class="tok-string">"n-001"</span><span class="tok-punc">,</span>
+      <span class="tok-key">"to"</span><span class="tok-punc">:</span> <span class="tok-string">"n-002"</span><span class="tok-punc">,</span>
+      <span class="tok-key">"kind"</span><span class="tok-punc">:</span> <span class="tok-string">"normal"</span>
+    }
+  ]
+}</code></pre>
+
+          <h3>คำอธิบาย field</h3>
+          <ul>
+            <li><code>statsSchema</code> ระบุว่าต้นไม้นี้มีค่าสเตตัสอะไรบ้าง และใช้ตีความ <code>stats</code> อย่างไร</li>
+            <li><code>position</code> ใช้สำหรับ layout ใน editor เป็นหลัก</li>
+            <li><code>cost.points</code> ให้เกมเป็นผู้ตีความตอนตรวจสอบการปลดล็อก</li>
+            <li><code>extra</code> เปิดกว้างสำหรับข้อความอธิบาย ไอคอน และข้อมูลใช้ใน UI เท่านั้น</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>4. JSON สำหรับเอกสาร</h2>
+          <p>
+            สามารถมีไฟล์ JSON แยกสำหรับเอกสาร ที่จัดกลุ่ม node ตามสายหรือคลาส
+            และอธิบายรายละเอียดในรูปแบบที่อ่านง่าย
+          </p>
+
+          <pre><code>{
+  <span class="tok-key">"treeName"</span><span class="tok-punc">:</span> <span class="tok-string">"Universal Skill Tree"</span><span class="tok-punc">,</span>
+  <span class="tok-key">"paths"</span><span class="tok-punc">:</span> [
+    {
+      <span class="tok-key">"id"</span><span class="tok-punc">:</span> <span class="tok-string">"path-strength"</span><span class="tok-punc">,</span>
+      <span class="tok-key">"name"</span><span class="tok-punc">:</span> <span class="tok-string">"สายพละกำลัง"</span><span class="tok-punc">,</span>
+      <span class="tok-key">"summary"</span><span class="tok-punc">:</span> <span class="tok-string">"เน้นสกิลโจมตีกายภาพและการต่อสู้ระยะใกล้"</span><span class="tok-punc">,</span>
+      <span class="tok-key">"nodes"</span><span class="tok-punc">:</span> [<span class="tok-string">"n-001"</span><span class="tok-punc">,</span> <span class="tok-string">"n-002"</span><span class="tok-punc">,</span> <span class="tok-string">"n-010"</span>]
+    }
+  ]<span class="tok-punc">,</span>
+  <span class="tok-key">"nodeDetails"</span><span class="tok-punc">:</span> {
+    <span class="tok-key">"n-001"</span><span class="tok-punc">:</span> {
+      <span class="tok-key">"name"</span><span class="tok-punc">:</span> <span class="tok-string">"Power Strike"</span><span class="tok-punc">,</span>
+      <span class="tok-key">"type"</span><span class="tok-punc">:</span> <span class="tok-string">"active"</span><span class="tok-punc">,</span>
+      <span class="tok-key">"tier"</span><span class="tok-punc">:</span> <span class="tok-number">1</span><span class="tok-punc">,</span>
+      <span class="tok-key">"summary"</span><span class="tok-punc">:</span> <span class="tok-string">"เพิ่มความเสียหายกายภาพ"</span><span class="tok-punc">,</span>
+      <span class="tok-key">"description"</span><span class="tok-punc">:</span> <span class="tok-string">"เพิ่มความเสียหายกายภาพ 15% สำหรับการโจมตีระยะใกล้"</span><span class="tok-punc">,</span>
+      <span class="tok-key">"requirements"</span><span class="tok-punc">:</span> [<span class="tok-string">"ไม่ต้องการเงื่อนไข"</span>]<span class="tok-punc">,</span>
+      <span class="tok-key">"effects"</span><span class="tok-punc">:</span> [<span class="tok-string">"+10 STR"</span><span class="tok-punc">,</span> <span class="tok-string">"+5 DEX"</span>]<span class="tok-punc">,</span>
+      <span class="tok-key">"tags"</span><span class="tok-punc">:</span> [<span class="tok-string">"melee"</span><span class="tok-punc">,</span> <span class="tok-string">"starter"</span>]
+    }
+  }
+}</code></pre>
+        </section>
+
+        <section>
+          <h2>5. JSON สำหรับ HTML</h2>
+          <p>
+            ในเว็บ static บางกรณี อาจสะดวกกว่าหากสร้าง HTML ล่วงหน้าแล้วเก็บเป็น JSON
+            จากนั้นให้หน้าเว็บนำค่าไปกำหนดเป็น <code>innerHTML</code> ตาม section ที่ต้องการ
+          </p>
+
+          <pre><code>{
+  <span class="tok-key">"sections"</span><span class="tok-punc">:</span> [
+    {
+      <span class="tok-key">"id"</span><span class="tok-punc">:</span> <span class="tok-string">"sec-strength"</span><span class="tok-punc">,</span>
+      <span class="tok-key">"title"</span><span class="tok-punc">:</span> <span class="tok-string">"สายพละกำลัง"</span><span class="tok-punc">,</span>
+      <span class="tok-key">"html"</span><span class="tok-punc">:</span> <span class="tok-string">&lt;h2&gt;สายพละกำลัง&lt;/h2&gt;&lt;p&gt;สายสกิลสำหรับผู้เล่นที่เน้นการโจมตีกายภาพระยะใกล้...&lt;/p&gt;</span>
+    }
+  ]
+}</code></pre>
+        </section>
+
+        <section>
+          <h2>6. ลำดับการใช้งานที่แนะนำ</h2>
+          <ol>
+            <li>ออกแบบสกิลทรีใน editor แล้ว export เป็นไฟล์ JSON</li>
+            <li>commit ไฟล์ JSON ไว้ใน repository</li>
+            <li>ให้เกมโหลด JSON ตอนเริ่มแล้วสร้างกราฟสกิลและ UI จากข้อมูลนั้น</li>
+            <li>หากต้องการเอกสารเพิ่มเติม ให้สร้าง JSON สำหรับเอกสาร หรือ HTML JSON จาก build script</li>
+          </ol>
+        </section>
+      </div>
+    </article>
+  </div>
+
+  <script>
+    const langButtons = document.querySelectorAll('.lang-btn');
+    const blocks = document.querySelectorAll('.lang-block');
+
+    function setLanguage(lang) {
+      langButtons.forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === lang);
+      });
+      blocks.forEach(block => {
+        block.classList.toggle('active', block.dataset.block === lang);
+      });
+    }
+
+    langButtons.forEach(btn => {
+      btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
+    });
+
+    setLanguage('en');
+  </script>
+</body>
+</html>
