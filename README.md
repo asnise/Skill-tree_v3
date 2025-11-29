@@ -415,8 +415,3 @@ http-server .
   เขียนสคริปต์อ่าน JSON แล้วคำนวณค่ารวมของสเตตัส หรือช่วยตรวจหาสายที่อาจจะแรงเกินไป
 
 ---
-
-## 3. License
-
-Specify your license here (for example MIT, Apache-2.0, or another license you prefer).  
-ระบุประเภท License ที่คุณต้องการใช้กับโปรเจกต์นี้ (เช่น MIT, Apache-2.0 เป็นต้น)
