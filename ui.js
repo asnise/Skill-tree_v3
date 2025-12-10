@@ -23,6 +23,136 @@ export function renderInspector() {
     return;
   }
 
+  // === MULTI-SELECT MODE ===
+  if (selectedIds.length > 1) {
+    const nodes = selectedIds.map(id => state.nodes.find(n => n.id === id)).filter(Boolean);
+
+    // Helpers to determine common values or mixed state
+    const getCommon = (key, def) => {
+        const first = nodes[0][key] !== undefined ? nodes[0][key] : def;
+        for (let i = 1; i < nodes.length; i++) {
+            const val = nodes[i][key] !== undefined ? nodes[i][key] : def;
+            if (val !== first) return null; // null indicates mixed values
+        }
+        return first;
+    };
+
+    const roleVal = getCommon("role", "normal");
+    const shapeVal = getCommon("shape", "circle");
+    const iconVal = getCommon("iconPath", "");
+    const linkStyleVal = getCommon("linkStyle", "curve");
+
+    // Only show sides input if all selected nodes are polygons
+    const allPoly = nodes.every(n => n.shape === 'poly');
+    const sidesVal = allPoly ? getCommon("polySides", 3) : null;
+
+    // Helper to generate Select HTML with mixed support
+    const renderSelect = (id, opts, val) => {
+        const mixedOpt = val === null ? `<option value="" selected disabled>...</option>` : '';
+        return `<select id="${id}">${mixedOpt}${opts}</select>`;
+    };
+
+    dom.inspectorContent.innerHTML = `
+        <div class="panel-section">
+            <div class="section-title">Multi-Selection (${nodes.length} nodes)</div>
+            <div class="control-group">
+                <label>Role</label>
+                ${renderSelect("inp-role-multi", `
+                    <option value="normal" ${roleVal === 'normal' ? 'selected' : ''}>Normal</option>
+                    <option value="base" ${roleVal === 'base' ? 'selected' : ''}>Base (Starter)</option>
+                `, roleVal)}
+            </div>
+        </div>
+
+        <div class="panel-section">
+          <div class="section-title">Style & Appearance</div>
+          <div class="control-group">
+            <label>Shape</label>
+             ${renderSelect("inp-shape-multi", `
+                <option value="circle" ${shapeVal === 'circle' ? 'selected' : ''}>Circle</option>
+                <option value="rect" ${shapeVal === 'rect' ? 'selected' : ''}>Rectangle</option>
+                <option value="poly" ${shapeVal === 'poly' ? 'selected' : ''}>Polygon</option>
+             `, shapeVal)}
+          </div>
+          ${allPoly ? `
+          <div class="control-group">
+            <label>Sides</label>
+            <input type="number" id="inp-sides-multi" value="${sidesVal === null ? '' : sidesVal}" placeholder="${sidesVal === null ? '...' : ''}" min="3" max="12">
+          </div>` : ''}
+          <div class="control-group">
+            <label>Icon Path</label>
+            <input type="text" id="inp-icon-multi" value="${iconVal === null ? '' : escapeHtml(iconVal)}" placeholder="${iconVal === null ? '...' : ''}">
+          </div>
+          <div class="control-group">
+            <label>Connection Style (edges TO these nodes)</label>
+             ${renderSelect("inp-link-style-multi", `
+                <option value="curve" ${linkStyleVal === "curve" ? "selected" : ""}>Curve</option>
+                <option value="straight" ${linkStyleVal === "straight" ? "selected" : ""}>Straight</option>
+                <option value="elbow" ${linkStyleVal === "elbow" ? "selected" : ""}>Elbow (bent)</option>
+             `, linkStyleVal)}
+          </div>
+        </div>
+
+        <div class="panel-section">
+           <button class="btn-action btn-danger" id="btn-delete-multi">Delete ${nodes.length} Nodes</button>
+        </div>
+    `;
+
+    // --- Bindings for Multi-Select ---
+    const updateAll = (updater) => {
+        nodes.forEach(n => updater(n));
+        normalizeActivation();
+        pushHistory();
+        render();
+        renderInspector();
+    };
+
+    document.getElementById("inp-role-multi").addEventListener("change", (e) => {
+        updateAll(n => n.role = e.target.value);
+    });
+
+    document.getElementById("inp-shape-multi").addEventListener("change", (e) => {
+        updateAll(n => n.shape = e.target.value);
+    });
+
+    if (document.getElementById("inp-sides-multi")) {
+        document.getElementById("inp-sides-multi").addEventListener("change", (e) => {
+            const val = parseInt(e.target.value);
+            if (!isNaN(val)) updateAll(n => n.polySides = val);
+        });
+    }
+
+    document.getElementById("inp-icon-multi").addEventListener("change", (e) => {
+        updateAll(n => n.iconPath = e.target.value);
+    });
+
+    document.getElementById("inp-link-style-multi").addEventListener("change", (e) => {
+        const style = e.target.value;
+        nodes.forEach(n => n.linkStyle = style);
+        // Also update existing edges pointing to these nodes
+        state.edges.forEach(edge => {
+            if(state.selectionSet.has(edge.to)) edge.style = style;
+        });
+        pushHistory();
+        render();
+    });
+
+    document.getElementById("btn-delete-multi").addEventListener("click", () => {
+         if (!confirm(`Delete ${selectedIds.length} selected nodes?`)) return;
+         state.nodes = state.nodes.filter(n => !state.selectionSet.has(n.id));
+         state.edges = state.edges.filter(e => !state.selectionSet.has(e.from) && !state.selectionSet.has(e.to));
+         state.selection = null;
+         state.selectionSet = new Set();
+         normalizeActivation();
+         pushHistory();
+         render();
+         renderInspector();
+    });
+
+    return;
+  }
+
+  // === SINGLE SELECTION MODE (Existing Logic) ===
   const node = state.nodes.find((n) => n.id === selectedIds[0]);
   if (!node) return;
 
@@ -51,6 +181,10 @@ export function renderInspector() {
       <div class="control-group">
         <label>Label</label>
         <input type="text" id="inp-label" value="${escapeHtml(node.label)}">
+      </div>
+      <div class="control-group">
+        <label>Description</label>
+        <textarea id="inp-desc" rows="3" style="resize:vertical;">${escapeHtml(node.description || "")}</textarea>
       </div>
       <div class="control-row">
         <div class="control-group" style="flex:1">
@@ -138,7 +272,7 @@ export function renderInspector() {
   `;
   dom.inspectorContent.innerHTML = html;
 
-  // === Bindings ===
+  // === Bindings for Single Select ===
 
   // 1. General Inputs
   document.getElementById("inp-label").addEventListener("input", (e) => {
@@ -146,6 +280,11 @@ export function renderInspector() {
     render();
   });
   document.getElementById("inp-label").addEventListener("change", pushHistory);
+
+  document.getElementById("inp-desc").addEventListener("input", (e) => {
+    node.description = e.target.value;
+  });
+  document.getElementById("inp-desc").addEventListener("change", pushHistory);
 
   document.getElementById("inp-id").addEventListener("change", (e) => {
     const newId = e.target.value.trim();

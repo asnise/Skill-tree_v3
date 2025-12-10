@@ -92,12 +92,20 @@ export function render() {
   dom.linksLayer.innerHTML = "";
 
   const nodeMap = new Map(state.nodes.map((n) => [n.id, n]));
+  const renderedPairs = new Set(); // Track pairs to prevent duplicate lines
 
   // Draw Edges
   state.edges.forEach((edge) => {
     const parent = nodeMap.get(edge.from);
     const node = nodeMap.get(edge.to);
     if (!parent || !node) return;
+
+    // Check if this relationship (A-B or B-A) has already been drawn
+    const pairKey = [edge.from, edge.to].sort().join(":");
+    if (renderedPairs.has(pairKey)) return;
+
+    // Mark this pair as rendered
+    renderedPairs.add(pairKey);
 
     const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
     path.setAttribute("d", buildEdgePath(edge, parent, node));

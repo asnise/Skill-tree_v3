@@ -4,6 +4,19 @@ import { render, updateTransform, updateSelectionRect, renderShapeEditor } from 
 import { renderInspector, hideCtx } from "./ui.js";
 import { pushHistory } from "./history.js";
 
+// === New Command Exposed for Context Menu ===
+window.cmdSetBase = (id) => {
+  const node = state.nodes.find(n => n.id === id);
+  if (node) {
+    node.role = "base";
+    normalizeActivation();
+    pushHistory();
+    render();
+    renderInspector();
+  }
+  hideCtx();
+};
+
 // === Functions invoked by Listeners ===
 export function onNodeMouseDown(e, node) {
   e.stopPropagation();
@@ -61,6 +74,15 @@ export function onNodeContextMenu(e, node) {
   if (selectedIds.length > 0) {
     html += `<div class="ctx-item" onclick="window.cmdLinkSelectedTo('${node.id}')">Link Selected to This</div>`;
   }
+
+  // NEW: Multi-select Unlink
+  // If we have a multi-selection active (including the clicked node), show option to unlink them from each other
+  if (state.selectionSet.size > 1 && state.selectionSet.has(node.id)) {
+      html += `<div class="ctx-item" onclick="window.cmdUnlinkSelected()">Unlink Selected</div>`;
+  }
+
+  // Added "Set This node is Base" item
+  html += `<div class="ctx-item" onclick="window.cmdSetBase('${node.id}')">Set This node is Base</div>`;
 
   html += `<div class="ctx-item" style="color:var(--danger)" onclick="window.deleteNode('${node.id}')">Delete Node</div>`;
 
@@ -270,14 +292,36 @@ export function initGlobalListeners() {
             if (targetGroup) {
                 const targetId = targetGroup.dataset.id;
                 if (targetId && targetId !== state.linkSourceNode.id) {
-                    const exists = state.edges.some(edge => edge.from === state.linkSourceNode.id && edge.to === targetId);
-                    if (!exists) {
+                    // === Bidirectional Logic ===
+                    let changed = false;
+                    const srcId = state.linkSourceNode.id;
+
+                    // 1. Forward Link
+                    const existsForward = state.edges.some(edge => edge.from === srcId && edge.to === targetId);
+                    if (!existsForward) {
                         state.edges.push({
                             id: "e" + state.edgeSeq++,
-                            from: state.linkSourceNode.id,
+                            from: srcId,
                             to: targetId,
                             style: state.linkSourceNode.linkStyle || "curve"
                         });
+                        changed = true;
+                    }
+
+                    // 2. Backward Link (Target -> Source)
+                    const existsBackward = state.edges.some(edge => edge.from === targetId && edge.to === srcId);
+                    if (!existsBackward) {
+                        const targetNode = state.nodes.find(n => n.id === targetId);
+                        state.edges.push({
+                            id: "e" + state.edgeSeq++,
+                            from: targetId,
+                            to: srcId,
+                            style: targetNode?.linkStyle || "curve"
+                        });
+                        changed = true;
+                    }
+
+                    if (changed) {
                         normalizeActivation();
                         pushHistory();
                         render();

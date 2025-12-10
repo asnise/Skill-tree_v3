@@ -1,5 +1,5 @@
 import { state, dom } from "./globals.js";
-import { render, updateTransform, renderShapeEditor } from "./renderer.js"; // Added renderShapeEditor
+import { render, updateTransform, renderShapeEditor } from "./renderer.js";
 import { renderInspector, hideCtx } from "./ui.js";
 import { loadFromLocal, pushHistory, undo, redo, saveToLocal } from "./history.js";
 import { initGlobalListeners } from "./events.js";
@@ -27,8 +27,10 @@ window.cmdLinkSelectedTo = (targetId) => {
   let changed = false;
   selected.forEach(srcId => {
     if (srcId === targetId) return;
-    const exists = state.edges.some(e => e.from === srcId && e.to === targetId);
-    if (!exists) {
+
+    // 1. Forward Link: Selected -> Target
+    const existsForward = state.edges.some(e => e.from === srcId && e.to === targetId);
+    if (!existsForward) {
       const srcNode = state.nodes.find(n => n.id === srcId);
       state.edges.push({
         id: "e" + state.edgeSeq++, from: srcId, to: targetId,
@@ -36,7 +38,19 @@ window.cmdLinkSelectedTo = (targetId) => {
       });
       changed = true;
     }
+
+    // 2. Backward Link: Target -> Selected (Relationship with each other)
+    const existsBackward = state.edges.some(e => e.from === targetId && e.to === srcId);
+    if (!existsBackward) {
+      const targetNode = state.nodes.find(n => n.id === targetId);
+      state.edges.push({
+        id: "e" + state.edgeSeq++, from: targetId, to: srcId,
+        style: targetNode?.linkStyle || "curve"
+      });
+      changed = true;
+    }
   });
+
   if (changed) {
     normalizeActivation();
     pushHistory();
@@ -44,6 +58,24 @@ window.cmdLinkSelectedTo = (targetId) => {
     renderInspector();
   }
   hideCtx();
+};
+
+// --- New: Unlink Selected ---
+window.cmdUnlinkSelected = () => {
+    const sel = state.selectionSet;
+    if (sel.size < 2) return;
+
+    const initialEdges = state.edges.length;
+    // Remove edges where both endpoints are in the selection
+    state.edges = state.edges.filter(e => !(sel.has(e.from) && sel.has(e.to)));
+
+    if (state.edges.length !== initialEdges) {
+        normalizeActivation();
+        pushHistory();
+        render();
+        renderInspector();
+    }
+    hideCtx();
 };
 
 window.deleteNode = (id) => {
@@ -88,7 +120,6 @@ window.cmdToggleSelection = (id) => {
 // --- Shape Generator Tool Commands ---
 
 window.cmdToggleShapeTool = () => {
-  // Ensure state exists if not initialized elsewhere
   if (!state.shapeEditor) {
       state.shapeEditor = { active: false, type: 'rect', x: 0, y: 0, w: 200, h: 200, radius: 100, sides: 5 };
   }
@@ -103,7 +134,6 @@ window.cmdToggleShapeTool = () => {
     if (ui) ui.style.display = "flex";
     if (btn) btn.classList.add("active");
 
-    // Center the shape in the current view
     state.shapeEditor.x = 0;
     state.shapeEditor.y = 0;
 
@@ -136,7 +166,6 @@ window.cmdCommitShape = () => {
   const { type, x, y, w, h, radius, sides } = state.shapeEditor;
   let points = [];
 
-  // 1. Calculate final positions
   if (type === 'rect') {
     const hw = w/2, hh = h/2;
     points = [
@@ -155,7 +184,6 @@ window.cmdCommitShape = () => {
     }
   }
 
-  // 2. Create Nodes at positions
   points.forEach((pt) => {
     const id = "n" + (state.nodes.length + 1) + "_" + Math.floor(Math.random()*1000);
     state.nodes.push({
@@ -171,10 +199,9 @@ window.cmdCommitShape = () => {
     });
   });
 
-  // 3. Cleanup
   pushHistory();
-  window.cmdToggleShapeTool(); // Turn off tool
-  render(); // Render main canvas to show new nodes
+  window.cmdToggleShapeTool();
+  render();
 };
 
 // --- Modals ---
@@ -185,11 +212,12 @@ window.openParentModal = (nodeId) => {
     .filter((n) => n.id !== nodeId)
     .map((n) => {
       const checked = parents.includes(n.id) ? "checked" : "";
-      const label = n.label || n.id;
+      const displayText = n.id;
+      const title = n.label || n.id;
       return `
         <div class="parent-item">
           <input type="checkbox" id="parent-${n.id}" value="${n.id}" ${checked}>
-          <label for="parent-${n.id}" title="${label}">${label}</label>
+          <label for="parent-${n.id}" title="${title}">${displayText}</label>
         </div>
       `;
     })
@@ -207,7 +235,6 @@ window.saveParentModal = () => {
   const checkboxes = dom.parentModalBody.querySelectorAll('input[type="checkbox"]');
   const selected = Array.from(checkboxes).filter(cb => cb.checked).map(cb => cb.value);
 
-  // Set parents logic (local implementation of setParentsForNode)
   const nodeId = state.parentModalNodeId;
   const current = getParentsOfNode(nodeId);
   state.edges = state.edges.filter((e) => !(e.to === nodeId && !selected.includes(e.from)));
@@ -244,7 +271,6 @@ function bindDOM() {
     dom.parentModalBody = document.getElementById("parent-modal-body");
     dom.importInput = document.getElementById("import-input");
 
-    // Game DOM
     dom.gameMode = document.getElementById("game-mode");
     dom.gamePoints = document.getElementById("game-points");
     dom.gameCanvasContainer = document.getElementById("game-canvas-container");
@@ -301,7 +327,6 @@ function initTools() {
         reader.readAsText(file);
     });
 
-    // Keyboard
     document.addEventListener("keydown", (e) => {
         if (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA") return;
         if (e.code === "Delete" || e.code === "Backspace") {
@@ -328,7 +353,6 @@ function initTools() {
 (function init() {
     bindDOM();
 
-    // Init Selection Rect
     const selRect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
     selRect.setAttribute("class", "selection-rect");
     selRect.setAttribute("visibility", "hidden");
